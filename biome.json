@@ -38,8 +38,7 @@
       "bracketSpacing": true,
       "jsxQuoteStyle": "double",
       "quoteProperties": "asNeeded",
-      "semicolons": "always",
-      "trailingComma": "all"
+      "semicolons": "always"
 		}
 	},
 	"json": {
