@@ -1,4 +1,5 @@
 "use client";
+import { signIn } from "next-auth/react";
 // import { useAnalysis } from '@/app/state/context/useAnalysisData'
 import Link from "next/link";
 
@@ -16,15 +17,22 @@ const MigrateButton = () => {
 					結果を見る
 				</Link>
 			) : (
-				<Link
-					href="/analysis_page/form_page"
+				// <Link
+				// 	href="/analysis_page/form_page"
+				// 	className="btn btn-md mx-auto mb-48 mt-10 flex w-5/12 min-w-56 max-w-72 animate-pulse items-center bg-gradient-to-r from-info to-success opacity-75 shadow-lg md:btn-lg"
+				// >
+				// 	{/* <img src='/file.png' className='size-12 md:w-16 md:h-16'></img> */}
+				// 	<span className="text-md font-bold text-base-100 md:text-lg">
+				// 		さっそく診断する
+				// 	</span>
+				// </Link>
+				<button
+					type="button"
 					className="btn btn-md mx-auto mb-48 mt-10 flex w-5/12 min-w-56 max-w-72 animate-pulse items-center bg-gradient-to-r from-info to-success opacity-75 shadow-lg md:btn-lg"
+					onClick={() => signIn("github")}
 				>
-					{/* <img src='/file.png' className='size-12 md:w-16 md:h-16'></img> */}
-					<span className="text-md font-bold text-base-100 md:text-lg">
-						さっそく診断する
-					</span>
-				</Link>
+					ログイン
+				</button>
 			)}
 		</>
 	);
