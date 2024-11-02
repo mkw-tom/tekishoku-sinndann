@@ -11,7 +11,7 @@ export interface DiagnosisType {
 	values: string[];
 	workStyle: string[];
 	teamRole: string;
-	timestamp: Date;
+	timestamp: string;
 }
 
 const diagnosisSlice = createSlice({
@@ -26,7 +26,7 @@ const diagnosisSlice = createSlice({
 		values: [],
 		workStyle: [],
 		teamRole: "",
-		timestamp: new Date(),
+		timestamp: "",
 	},
 	reducers: {
 		setDiagnosisData: (
