@@ -4,6 +4,7 @@ import "./globals.css";
 import NextAuthProvider from "@/lib/nextauth/NextauthProvider";
 import SesstionChecker from "@/lib/nextauth/SesstionChecker";
 import ReduxProvider from "@/lib/redux/ReduxProvider";
+import Header from "./components/Header";
 
 const geistSans = localFont({
 	src: "./fonts/GeistVF.woff",
@@ -33,7 +34,10 @@ export default function RootLayout({
 			>
 				<ReduxProvider>
 					<NextAuthProvider>
-						<SesstionChecker>{children}</SesstionChecker>
+						<SesstionChecker>
+							<Header />
+							{children}
+						</SesstionChecker>
 					</NextAuthProvider>
 				</ReduxProvider>
 			</body>
