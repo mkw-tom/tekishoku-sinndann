@@ -8,8 +8,8 @@ interface AuthLayoutProps {
 	children: ReactNode;
 }
 
-const AuthLayout: React.FC<AuthLayoutProps> = ({ children }) => {
+const ReduxProvider: React.FC<AuthLayoutProps> = ({ children }) => {
 	return <Provider store={store}>{children}</Provider>;
 };
 
-export default AuthLayout;
+export default ReduxProvider;

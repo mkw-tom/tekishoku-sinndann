@@ -5,19 +5,17 @@ import type { ReactNode } from "react";
 import { useEffect } from "react";
 
 const SesstionChecker = ({ children }: { children: ReactNode }) => {
-	const { data: session, status } = useSession();
+	const { status } = useSession();
 	const router = useRouter();
-	console.log(session);
-	console.log(status);
 
 	useEffect(() => {
-		if (session === null || undefined) {
-			return router.push("/");
-			// biome-ignore lint/style/noUselessElse: <explanation>
-		} else {
-			return router.push("/");
+		if (status === "authenticated") {
+			router.push("/mainPage");
+		} else if (status === "unauthenticated") {
+			router.push("/");
 		}
-	}, [router, session]);
+	}, [router, status]);
+
 	return <div>{children}</div>;
 };
 
