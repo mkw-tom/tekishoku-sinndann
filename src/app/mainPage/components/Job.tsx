@@ -8,7 +8,6 @@ const Job = () => {
 
 	return (
 		<section className="flex w-full flex-col items-start dark:text-gray-700">
-			{/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
 			<h3 className="text-lgmd:text-xl mb-3 flex items-center font-bold">
 				<MdPersonSearch />
 				マッチした職業
