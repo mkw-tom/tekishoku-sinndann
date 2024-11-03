@@ -25,7 +25,7 @@ const Skills = () => {
 			{
 				label: "あなたの能力スコア",
 				data: skillScore,
-				backgroundColor: " rgba(249, 115, 22, 0.4)",
+				backgroundColor: " rgba(34, 197, 94, 0.4)",
 				borderColor: "#d1d5db",
 				borderWidth: 1,
 			},
