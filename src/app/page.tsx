@@ -1,9 +1,9 @@
 import React from "react";
-import { FaCheckCircle, FaCircle, FaGithub, FaUser } from "react-icons/fa";
-import { FcGoogle } from "react-icons/fc";
-import { MdEmail, MdLock, MdPassword } from "react-icons/md";
+// import { FaCheckCircle, FaCircle, FaGithub, FaUser } from "react-icons/fa";
+// import { FcGoogle } from "react-icons/fc";
+// import { MdEmail, MdLock, MdPassword } from "react-icons/md";
 // import Image from "next/image";
-import FirstView from "./components/FirstView";
+// import FirstView from "./components/FirstView";
 import RightView from "./components/RightView";
 import LoginForm from "./components/loginForm/LoginForm";
 

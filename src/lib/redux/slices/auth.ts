@@ -1,14 +1,15 @@
 "use client";
+import type { UserType } from "@/app/types/ReduxTypes";
 import { type PayloadAction, createSlice } from "@reduxjs/toolkit";
 
-export interface UserType {
-	// authId: string
-	customId: string;
-	username: string;
-	password: string;
-	profilePicture: string;
-	email: string;
-}
+// export interface UserType {
+// 	// authId: string
+// 	customId: string;
+// 	username: string;
+// 	password: string;
+// 	profilePicture: string;
+// 	email: string;
+// }
 export const authSlice = createSlice({
 	name: "auth",
 	initialState: {

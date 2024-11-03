@@ -1,20 +1,8 @@
+import type {
+	DiagnosisFormInputType,
+	InputActionPayload,
+} from "@/app/types/ReduxTypes";
 import { type PayloadAction, createSlice } from "@reduxjs/toolkit";
-
-interface InputActionPayload {
-	name: keyof DiagnosisFormInputType; // フィールド名がペイロードに含まれる
-	value: string; // 更新する値
-}
-
-export interface DiagnosisFormInputType {
-	mbti: string;
-	skills: string;
-	certifications: string;
-	experience: string;
-	interests: string;
-	values: string;
-	workStyle: string;
-	teamRole: string;
-}
 
 export const diagnosisFormInputSlice = createSlice({
 	name: "diagnosisFormInput",
