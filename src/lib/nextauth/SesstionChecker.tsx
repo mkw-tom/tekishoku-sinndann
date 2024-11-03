@@ -61,7 +61,7 @@ const SesstionChecker = ({ children }: { children: ReactNode }) => {
 	useEffect(() => {
 		if (status === "authenticated") {
 			getUserAndDiagnosisDatas();
-			router.push("/mainPage");
+			// router.push("/mainPage");
 		} else if (status === "unauthenticated") {
 			router.push("/");
 		}
