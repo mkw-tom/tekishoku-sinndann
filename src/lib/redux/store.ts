@@ -1,21 +1,20 @@
 "use client";
+import type {
+	DiagnosisFormInputType,
+	DiagnosisSendDataType,
+	UserType,
+} from "@/app/types/ReduxTypes";
 import { configureStore } from "@reduxjs/toolkit";
-import auth, { type UserType } from "./slices/auth";
-import diagnosis, { type DiagnosisType } from "./slices/diagnosis";
-import diagnosisFormInput, {
-	type DiagnosisFormInputType,
-} from "./slices/diagnosisFormInput";
-
-export type storeType = {
-	diagnosisFormInput: DiagnosisFormInputType;
-	diagnosis: DiagnosisType;
-	auth: UserType;
-};
+import auth from "./slices/auth";
+import diagnosisFormInput, {} from "./slices/diagnosisFormInput";
+import diagnosisSendData from "./slices/diagnosisSendData";
+import userDiagnosis from "./slices/userDiagnosis";
 
 export const store = configureStore({
 	reducer: {
 		diagnosisFormInput: diagnosisFormInput,
-		diagnosis: diagnosis,
+		diagnosisSendData: diagnosisSendData,
 		auth: auth,
+		userDiagnosis: userDiagnosis,
 	},
 });

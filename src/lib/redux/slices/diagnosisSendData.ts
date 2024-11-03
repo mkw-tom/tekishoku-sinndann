@@ -1,21 +1,22 @@
 "use client";
+import type { DiagnosisSendDataType } from "@/app/types/ReduxTypes";
 import { type PayloadAction, createSlice } from "@reduxjs/toolkit";
 
-export interface DiagnosisType {
-	_id: string;
-	mbti: string;
-	skills: string[];
-	certifications: string[];
-	experience: string[];
-	interests: string[];
-	values: string[];
-	workStyle: string[];
-	teamRole: string;
-	timestamp: string;
-}
+// export interface DiagnosisType {
+// 	_id: string;
+// 	mbti: string;
+// 	skills: string[];
+// 	certifications: string[];
+// 	experience: string[];
+// 	interests: string[];
+// 	values: string[];
+// 	workStyle: string[];
+// 	teamRole: string;
+// 	timestamp: string;
+// }
 
-const diagnosisSlice = createSlice({
-	name: "diagnosis",
+const diagnosisSendDataSlice = createSlice({
+	name: "diagnosisSendData",
 	initialState: {
 		_id: "",
 		mbti: "",
@@ -26,12 +27,11 @@ const diagnosisSlice = createSlice({
 		values: [],
 		workStyle: [],
 		teamRole: "",
-		timestamp: "",
 	},
 	reducers: {
-		setDiagnosisData: (
-			state: DiagnosisType,
-			action: PayloadAction<DiagnosisType>,
+		setDiagnosisSendData: (
+			state: DiagnosisSendDataType,
+			action: PayloadAction<DiagnosisSendDataType>,
 		) => {
 			state._id = action.payload._id;
 			state.mbti = action.payload.mbti;
@@ -42,10 +42,9 @@ const diagnosisSlice = createSlice({
 			state.values = action.payload.values;
 			state.workStyle = action.payload.workStyle;
 			state.teamRole = action.payload.teamRole;
-			state.timestamp = action.payload.timestamp;
 		},
 	},
 });
 
-export const { setDiagnosisData } = diagnosisSlice.actions;
-export default diagnosisSlice.reducer;
+export const { setDiagnosisSendData } = diagnosisSendDataSlice.actions;
+export default diagnosisSendDataSlice.reducer;
