@@ -1,6 +1,7 @@
 export interface UserType {
 	// authId: string
-	customId: string;
+	// customId: string;
+	id: string;
 	username: string;
 	password: string;
 	profilePicture: string;
@@ -39,9 +40,16 @@ export interface userDiagnosisType {
 	jobProposals: string[];
 	commonPoints: string[];
 	skillScores: skillScoresType[];
+	timestamp: string;
 }
 
 interface skillScoresType {
 	skillName: string;
 	score: number;
 }
+
+export type storeType = {
+	diagnosisFormInput: DiagnosisFormInputType;
+	diagnosis: DiagnosisSendDataType;
+	auth: UserType;
+};

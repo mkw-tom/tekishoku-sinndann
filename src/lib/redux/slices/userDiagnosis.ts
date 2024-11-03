@@ -8,6 +8,7 @@ const userDiagnosisSlice = createSlice({
 		jobProposals: [],
 		commonPoints: [],
 		skillScores: [],
+		timestamp: "",
 	},
 	reducers: {
 		setUserDiagnosis: (
@@ -18,6 +19,7 @@ const userDiagnosisSlice = createSlice({
 			state.commonPoints = action.payload.commonPoints;
 			state.jobProposals = action.payload.jobProposals;
 			state.skillScores = action.payload.skillScores;
+			state.timestamp = action.payload.timestamp;
 		},
 	},
 });

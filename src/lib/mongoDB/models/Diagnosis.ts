@@ -5,6 +5,7 @@ export interface userDiagnosisType {
 	jobProposals: string[];
 	commonPoints: string[];
 	skillScores: skillScoresType[];
+	timestamp: string;
 }
 
 interface skillScoresType {
@@ -17,12 +18,13 @@ const SKillScoreSchema = new Schema<skillScoresType>({
 	score: { type: Number },
 });
 
-const DiagnosisSchma = new Schema<userDiagnosisType>({
+const DiagnosisScehma = new Schema<userDiagnosisType>({
 	userId: { type: String, require: true },
 	jobProposals: { type: [String] },
 	commonPoints: { type: [String] },
 	skillScores: { type: [SKillScoreSchema] },
+	timestamp: { type: String },
 });
 
 export const DiagnosissModel =
-	mongoose.models.Analysis || mongoose.model("Diagnosis", DiagnosisSchma);
+	mongoose.models.Diagnosis || mongoose.model("Diagnosis", DiagnosisScehma);

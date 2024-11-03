@@ -13,7 +13,7 @@ import { type PayloadAction, createSlice } from "@reduxjs/toolkit";
 export const authSlice = createSlice({
 	name: "auth",
 	initialState: {
-		customId: "",
+		id: "",
 		username: "",
 		password: "",
 		profilePicture: "",
@@ -21,14 +21,14 @@ export const authSlice = createSlice({
 	},
 	reducers: {
 		setUser: (state: UserType, action: PayloadAction<UserType>) => {
-			state.customId = action.payload.customId;
+			state.id = action.payload.id;
 			state.username = action.payload.username;
 			state.password = action.payload.password;
 			state.profilePicture = action.payload.profilePicture;
 			state.email = action.payload.email;
 		},
 		clearUser: (state: UserType) => {
-			state.customId = "";
+			state.id = "";
 			state.username = "";
 			state.password = "";
 			state.profilePicture = "";

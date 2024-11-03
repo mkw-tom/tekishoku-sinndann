@@ -10,12 +10,6 @@ import diagnosisFormInput, {} from "./slices/diagnosisFormInput";
 import diagnosisSendData from "./slices/diagnosisSendData";
 import userDiagnosis from "./slices/userDiagnosis";
 
-export type storeType = {
-	diagnosisFormInput: DiagnosisFormInputType;
-	diagnosis: DiagnosisSendDataType;
-	auth: UserType;
-};
-
 export const store = configureStore({
 	reducer: {
 		diagnosisFormInput: diagnosisFormInput,
