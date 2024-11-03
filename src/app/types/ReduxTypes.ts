@@ -52,4 +52,5 @@ export type storeType = {
 	diagnosisFormInput: DiagnosisFormInputType;
 	diagnosis: DiagnosisSendDataType;
 	auth: UserType;
+	userDiagnosis: userDiagnosisType;
 };

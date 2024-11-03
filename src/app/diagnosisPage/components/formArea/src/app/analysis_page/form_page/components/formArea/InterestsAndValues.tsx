@@ -27,7 +27,7 @@ const InterestsAndValues = () => {
 							// onKeyDown={(e) => handleAddValue('interests', e)}
 						/>
 						<button
-							className="btn btn-square btn-info text-white"
+							className="btn btn-square btn-info text-white "
 							type="button"
 							// onClick={() => addValue('interests')}
 						>
@@ -48,7 +48,7 @@ const InterestsAndValues = () => {
 					</span>
 					<label
 						htmlFor="my_modal_6"
-						className="btn btn-info w-80 border-info bg-inherit text-info hover:bg-inherit"
+						className="btn btn-info w-80 border-info bg-inherit text-info hover:bg-inherit bg-white"
 					>
 						項目をチェック
 					</label>

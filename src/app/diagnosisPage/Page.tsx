@@ -30,23 +30,21 @@ const Page = () => {
 	};
 
 	return (
-		<main className="h-auto dark:bg-gray-800">
-			<div className="mx-5 h-full pb-48 pt-20 md:mx-10">
-				<div className="flex w-full items-center justify-between">
-					<h1 className="mb-5 w-full font-mono text-xl font-bold tracking-widest">
-						MBTI適職診断
-					</h1>
+		<main className="w-full h-auto bg-gradient-to-tr to-info from-success ">
+			<div className="mx-5 h-full pb-48 pt-20 md:mx-10 w-full">
+				{/* <div className="flex w-full items-center justify-between">
+				
+				</div> */}
+				<div className="text-md mb-5 font-bold flex justify-between w-11/12">
+					・８つの項目を入力してください。
 					<button
 						type="button"
 						className="sm:text-md btn-link w-36  text-sm text-gray-700 hover:opacity-70 dark:text-base-300"
 						onClick={handlePageBack}
 					>
-						前へ戻る
+						ホームに戻る
 					</button>
 				</div>
-				<p className="text-md mb-5 font-bold">
-					・８つの項目を入力してください。
-				</p>
 				<form className="bg-inf  flex size-full flex-col items-start gap-16">
 					{/* <label
             htmlFor=""
