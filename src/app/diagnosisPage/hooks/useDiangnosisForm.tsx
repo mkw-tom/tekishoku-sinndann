@@ -75,7 +75,7 @@ const useDiangnosisForm = () => {
 				{sendData[field].map((value) => (
 					<li
 						key={value}
-						className="p y-2 flex h-auto items-center justify-center gap-2 rounded-md bg-base-300 px-2 "
+						className="p y-2 flex h-auto items-center justify-center gap-2 rounded-md bg-gray-200 px-2  "
 					>
 						<button
 							onClick={() =>
@@ -98,10 +98,14 @@ const useDiangnosisForm = () => {
 	};
 
 	const addArrayValue = (field: ArrayFields) => {
+		const value = inputData[field];
+		if (value === "") {
+			return alert("文字を入力してください");
+		}
 		dispatch(
 			setArrayValue({
 				field: field,
-				value: inputData[field],
+				value: value,
 			}),
 		);
 		dispatch(

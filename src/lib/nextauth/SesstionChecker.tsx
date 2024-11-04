@@ -42,11 +42,11 @@ const SesstionChecker = ({ children }: { children: ReactNode }) => {
 			if (jsonData?.diagnosisData) {
 				dispatch(
 					setUserDiagnosis({
-						userId: jsonData?.diagnosis.userId,
-						commonPoints: jsonData?.diagnosis.commonpoints,
-						jobProposals: jsonData?.diagnosis.jobProposals,
-						skillScores: jsonData?.diagnosis.skillScores,
-						timestamp: jsonData?.diagnosis.createdAt,
+						userId: jsonData?.diagnosisData.userId,
+						commonPoints: jsonData?.diagnosisData.commonPoints,
+						jobProposals: jsonData?.diagnosisData.jobProposals,
+						skillScores: jsonData?.diagnosisData.skillScores,
+						timestamp: jsonData?.diagnosisData.createdAt,
 					}),
 				);
 			}
@@ -61,11 +61,11 @@ const SesstionChecker = ({ children }: { children: ReactNode }) => {
 	useEffect(() => {
 		if (status === "authenticated") {
 			getUserAndDiagnosisDatas();
-			// router.push("/mainPage");
+			router.push("/mainPage");
 		} else if (status === "unauthenticated") {
 			router.push("/");
 		}
-	}, [router, status]);
+	}, [status]);
 
 	return <div>{children}</div>;
 };

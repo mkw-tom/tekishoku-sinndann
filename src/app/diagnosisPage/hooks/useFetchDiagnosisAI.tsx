@@ -1,7 +1,8 @@
-import type { DiagnosisSendDataType, storeType } from "@/app/types/ReduxTypes";
+"use client";
+import type { storeType } from "@/app/types/ReduxTypes";
 import { clearSendData } from "@/lib/redux/slices/diagnosisSendData";
 import { setUserDiagnosis } from "@/lib/redux/slices/userDiagnosis";
-import React, { useState } from "react";
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 const useFetchDiagnosisAI = () => {
@@ -21,7 +22,7 @@ const useFetchDiagnosisAI = () => {
 		...sendData,
 	};
 
-	const fetchAnalysisFunc = async (state: DiagnosisSendDataType) => {
+	const fetchDiagnasis = async () => {
 		setLoading(true);
 		const {
 			mbti,
@@ -32,12 +33,10 @@ const useFetchDiagnosisAI = () => {
 			interests,
 			workStyle,
 			teamRole,
-		} = state;
+		} = sendData;
 
 		try {
-			const url =
-				process.env.NEXT_PUBLIC_API_URL || process.env.NEXT_PUBLIC_DEV_API_URL;
-			const res = await fetch(`${url}/api/selfAnalysis`, {
+			const res = await fetch("api/diagnosisAI", {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",
@@ -65,9 +64,10 @@ const useFetchDiagnosisAI = () => {
 			const result = await res.json();
 
 			// formDataDispatch({ type: 'CLEAR'})
-			return dispatch(
+			console.log(result);
+			dispatch(
 				setUserDiagnosis({
-					userId: result.id,
+					userId: result.userId,
 					commonPoints: result.commonPoints,
 					jobProposals: result.jobProposals,
 					skillScores: result.skillScores,
@@ -80,12 +80,11 @@ const useFetchDiagnosisAI = () => {
 			console.log("faild fetch", error);
 		} finally {
 			dispatch(clearSendData());
-			setError(true);
 			setLoading(false);
 		}
 	};
 
-	return { loading, fetchAnalysisFunc, data, success, error };
+	return { loading, fetchDiagnasis, data, success, error };
 };
 
 export default useFetchDiagnosisAI;
