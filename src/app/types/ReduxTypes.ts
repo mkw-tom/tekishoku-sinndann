@@ -8,7 +8,7 @@ export interface UserType {
 	email: string;
 }
 export interface DiagnosisSendDataType {
-	_id: string;
+	// _id: string;
 	mbti: string;
 	skills: string[];
 	certifications: string[];
@@ -50,7 +50,15 @@ interface skillScoresType {
 
 export type storeType = {
 	diagnosisFormInput: DiagnosisFormInputType;
-	diagnosis: DiagnosisSendDataType;
+	diagnosisSendData: DiagnosisSendDataType;
 	auth: UserType;
 	userDiagnosis: userDiagnosisType;
 };
+
+export type ArrayFields =
+	| "skills"
+	| "certifications"
+	| "experience"
+	| "interests"
+	| "values"
+	| "workStyle";

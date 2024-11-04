@@ -24,7 +24,7 @@ export const diagnosisFormInputSlice = createSlice({
 			const { name, value } = action.payload;
 			state[name] = value;
 		},
-		formClear: (
+		clearInput: (
 			state,
 			action: PayloadAction<{ name: keyof DiagnosisFormInputType }>,
 		) => {
@@ -34,5 +34,5 @@ export const diagnosisFormInputSlice = createSlice({
 	},
 });
 
-export const { setInput, formClear } = diagnosisFormInputSlice.actions;
+export const { setInput, clearInput } = diagnosisFormInputSlice.actions;
 export default diagnosisFormInputSlice.reducer;
