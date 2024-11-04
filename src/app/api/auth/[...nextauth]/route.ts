@@ -8,7 +8,6 @@ import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import GitHubProvider from "next-auth/providers/github";
 import GoogleProvider from "next-auth/providers/google";
-import { v4 as uuidv4 } from "uuid";
 
 const handler = NextAuth({
 	providers: [

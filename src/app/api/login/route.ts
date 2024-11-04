@@ -34,14 +34,14 @@ export async function POST(req: NextRequest) {
 		}
 
 		const userDiagnosis = await DiagnosissModel.findOne({
-			userId: user?.customId,
+			userId: user?.id,
 		});
 		if (!userDiagnosis) {
 			console.log("Analysis data is not found");
 		}
 
 		return new NextResponse(
-			JSON.stringify({ userData: user, analysisData: userDiagnosis }),
+			JSON.stringify({ userData: user, diagnosisData: userDiagnosis }),
 			{
 				status: 200,
 				headers: { "Content-Type": "application/json" },

@@ -3,13 +3,15 @@
 # ベースイメージとしてNode.jsを使用
 FROM node:20.17.0
 
+ENV NODE_ENV=production
+
 # 作業ディレクトリを設定
 WORKDIR /app
 
 # 依存関係のファイルをコピーしてインストール
 COPY package.json ./
 COPY package-lock.json ./
-RUN npm install
+RUN npm install --only=production
 
 # アプリのソースコードをコピー
 COPY . .
@@ -21,4 +23,4 @@ RUN npm run build
 EXPOSE 3000
 
 # アプリケーションを起動
-CMD ["npm", "start"]
+CMD ["npm", "run", "dev"]

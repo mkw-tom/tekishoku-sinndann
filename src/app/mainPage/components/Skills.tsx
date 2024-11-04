@@ -1,22 +1,20 @@
 "use client";
+import type { storeType } from "@/app/types/ReduxTypes";
 import { MdPsychology } from "react-icons/md";
+import { useSelector } from "react-redux";
 // import { useAnalysis } from '@/app/state/context/useAnalysisData'
 // import { Psychology } from '@mui/icons-material'
 import ResultChart from "./ResultChart";
 
 const Skills = () => {
-	const Analysis = [
-		{ skillName: "暗記力", score: "50" },
-		{ skillName: "暗記力", score: "50" },
-		{ skillName: "暗記力", score: "50" },
-		{ skillName: "暗記力", score: "50" },
-		{ skillName: "暗記力", score: "50" },
-	];
-	const skillName = Analysis?.map((data) => {
+	const userDiagnosis = useSelector((state: storeType) => state.userDiagnosis);
+	const skillScores = userDiagnosis.skillScores;
+
+	const skillName = skillScores?.map((data) => {
 		return data.skillName;
 	});
 
-	const skillScore = Analysis?.map((data) => {
+	const skillScore = skillScores?.map((data) => {
 		return data.score;
 	});
 	const data = {
@@ -33,7 +31,7 @@ const Skills = () => {
 	};
 
 	return (
-		<section className=" w-full rounded-md bg-sky-200 py-5 md:p-5 lg:w-1/2  ">
+		<section className=" w-full rounded-md bg-sky-200 bg-opacity-60 py-5 md:p-5 lg:w-1/2  ">
 			<h3 className="text-md mr-1 flex items-center pl-5 font-bold text-gray-700 md:p-0 md:text-xl">
 				<MdPsychology style={{ fontSize: "25px" }} />
 				<span>能力スコア</span>
