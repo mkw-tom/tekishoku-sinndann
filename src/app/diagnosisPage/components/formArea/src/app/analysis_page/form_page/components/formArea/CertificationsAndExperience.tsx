@@ -1,8 +1,17 @@
 "use client";
+
+import useDiangnosisForm from "@/app/diagnosisPage/hooks/useDiangnosisForm";
+import type { storeType } from "@/app/types/ReduxTypes";
+import { useSelector } from "react-redux";
+
 // import useAnalysisForm from '../../Hooks/useAnalysisForm'
 
 const CertificationsAndExperience = () => {
-	// const { handleAddValue, valueList, addValue, handleChangeInput, inputState } = useAnalysisForm()
+	const inputDatas = useSelector(
+		(state: storeType) => state.diagnosisFormInput,
+	);
+	const { handleChangeInput, valueList, addArrayValue } = useDiangnosisForm();
+
 	return (
 		<>
 			<div className="flex w-full flex-col gap-3 border-b-2 py-1 lg:flex-row ">
@@ -16,22 +25,22 @@ const CertificationsAndExperience = () => {
 							className="input input-bordered input-info w-10/12 max-w-xs dark:bg-gray-600 sm:w-80"
 							type="text"
 							name="certifications"
-							// value={inputState.certifications}
+							value={inputDatas.certifications}
 							placeholder="日商簿記３級、ITパスポート"
-							// onChange={(e) => handleChangeInput(e)}
+							onChange={(e) => handleChangeInput(e)}
 							// onKeyDown={(e) => handleAddValue('certifications', e)}
 						/>
 
 						<button
 							className="btn btn-square btn-info text-white"
 							type="button"
-							// onClick={() => addValue('certifications')}
+							onClick={() => addArrayValue("certifications")}
 						>
 							追加
 						</button>
 					</div>
 				</label>
-				{/* {valueList('certifications')} */}
+				{valueList("certifications")}
 			</div>
 
 			<div className="flex w-full flex-col gap-3 border-b-2 py-1 lg:flex-row ">
@@ -46,20 +55,20 @@ const CertificationsAndExperience = () => {
 							className="textarea textarea-info w-10/12 max-w-xs dark:bg-gray-600 sm:w-80"
 							placeholder="例：ゼミの研究で優勝しました"
 							name="experience"
-							// value={inputState.experience}
-							// onChange={(e) => handleChangeInput(e)}
+							value={inputDatas.experience}
+							onChange={(e) => handleChangeInput(e)}
 							// onKeyDown={(e) => handleAddValue('experience', e)}
 						></textarea>
 						<button
 							className="btn btn-square btn-info text-white"
 							type="button"
-							// onClick={() => addValue('experience')}
+							onClick={() => addArrayValue("experience")}
 						>
 							追加
 						</button>
 					</div>
 				</label>
-				{/* {valueList('experience')} */}
+				{valueList("experience")}
 			</div>
 		</>
 	);

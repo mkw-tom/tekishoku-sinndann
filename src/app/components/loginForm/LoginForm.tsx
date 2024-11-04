@@ -1,8 +1,4 @@
 import React from "react";
-import { FaCheckCircle, FaCircle, FaGithub, FaUser } from "react-icons/fa";
-import { FcGoogle } from "react-icons/fc";
-import { MdEmail, MdLock, MdPassword } from "react-icons/md";
-import EmailButton from "./EmailButton";
 import EmailIForm from "./EmailForm";
 import GitHubButton from "./GitHubButton";
 import GoogleButton from "./GoogleButton";

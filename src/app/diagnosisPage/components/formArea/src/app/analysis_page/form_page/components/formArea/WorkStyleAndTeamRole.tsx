@@ -1,10 +1,19 @@
 "use client";
 
+import useDiangnosisForm from "@/app/diagnosisPage/hooks/useDiangnosisForm";
+import type { storeType } from "@/app/types/ReduxTypes";
+import { useSelector } from "react-redux";
+
 // import useAnalysisForm from '../../Hooks/useAnalysisForm'
 
 const WorkStyleAndTeamRole = () => {
-	// const { handleAddValue, valueList, addTeamRole, addValue, handleChangeInput, inputState } =
-	//   useAnalysisForm()
+	const inputDatas = useSelector(
+		(state: storeType) => state.diagnosisFormInput,
+	);
+	const sendDatas = useSelector((state: storeType) => state.diagnosisSendData);
+	const { handleChangeInput, valueList, addArrayValue, setTeamRoleFunc } =
+		useDiangnosisForm();
+	console.log(sendDatas);
 	return (
 		<>
 			<div className="flex w-full flex-col gap-3 border-b-2 py-1 lg:flex-row ">
@@ -18,22 +27,22 @@ const WorkStyleAndTeamRole = () => {
 						<textarea
 							className="textarea textarea-info  w-10/12 max-w-xs dark:bg-gray-600 sm:w-80"
 							placeholder="例：プライベートを大事にしたい。"
-							// value={inputState.workStyle}
+							value={inputDatas.workStyle}
 							name="workStyle"
-							// onChange={(e) => handleChangeInput(e)}
+							onChange={(e) => handleChangeInput(e)}
 							// onKeyDown={(e) => handleAddValue('workStyle', e)}
 							minLength={20}
 						></textarea>
 						<button
 							className="btn btn-square btn-info text-white"
 							type="button"
-							// onClick={() => addValue('workStyle')}
+							onClick={() => addArrayValue("workStyle")}
 						>
 							追加
 						</button>
 					</div>
 				</label>
-				{/* {valueList('workStyle')} */}
+				{valueList("workStyle")}
 			</div>
 			<div className="flex w-full flex-col gap-3 border-b-2 py-5 lg:flex-row">
 				<label
@@ -51,9 +60,9 @@ const WorkStyleAndTeamRole = () => {
 							name="teamRole"
 							// onKeyDown={(e) => handleAddValue('workStyle', e)}
 							// onKeyDown={(e) => addTeamRole(e)}
-							// onChange={(e) => addTeamRole(e.target.value)}
+							onChange={(e) => setTeamRoleFunc(e.target.value)}
 						></textarea>
-						{/* <button className="btn btn-square btn-info text-white" type='button'  onClick={() => addValue('interests')}>保存</button> */}
+						{/* <button className="btn btn-square btn-info text-white" type='button'  onClick={() => addArrayValue('interests')}>保存</button> */}
 					</div>
 				</label>
 			</div>

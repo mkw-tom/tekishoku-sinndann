@@ -1,13 +1,19 @@
 "use client";
 
+import useDiangnosisForm from "@/app/diagnosisPage/hooks/useDiangnosisForm";
 import { MBTiArray } from "@/app/diagnosisPage/selectOptions";
+import type { storeType } from "@/app/types/ReduxTypes";
+import { useSelector } from "react-redux";
 
 // import { MBTiArray } from '@/app/analysis_page/selectOption'
 // import useAnalysisForm from '../../Hooks/useAnalysisForm'
 
 const MBTIandSkills = () => {
-	// const { selectMBTI, handleAddValue, valueList, handleChangeInput, inputState, addValue } =
-	//   useAnalysisForm()
+	const inputDatas = useSelector(
+		(state: storeType) => state.diagnosisFormInput,
+	);
+	const { handleChangeInput, setMBTIFunc, valueList, addArrayValue } =
+		useDiangnosisForm();
 
 	return (
 		<>
@@ -25,8 +31,7 @@ const MBTIandSkills = () => {
           > */}
 					<select
 						className="select select-info w-full max-w-xs dark:bg-gray-600"
-						// value={inputState.mbti}
-						// onChange={(e) => selectMBTI(e.target.value)}
+						onChange={(e) => setMBTIFunc(e.target.value)}
 					>
 						<option disabled>-- MBTIタイプを選択 --</option>
 						{MBTiArray.map((mbti) => (
@@ -56,22 +61,22 @@ const MBTIandSkills = () => {
 						<input
 							type="text"
 							name="skills"
-							// value={inputState.skills}
+							value={inputDatas.skills}
 							placeholder="フラッシュ暗算"
 							className="input input-bordered input-info  w-10/12 max-w-xs dark:bg-gray-600 sm:w-80"
-							// onChange={(e) => handleChangeInput(e)}
+							onChange={(e) => handleChangeInput(e)}
 							// onKeyDown={(e) => handleAddValue('skills', e)}
 						/>
 						<button
 							className="btn btn-square btn-info text-white"
 							type="button"
-							// onClick={() => addValue('skills')}
+							onClick={() => addArrayValue("skills")}
 						>
 							追加
 						</button>
 					</div>
 				</label>
-				{/* {valueList('skills')} */}
+				{valueList("skills")}
 			</div>
 		</>
 	);

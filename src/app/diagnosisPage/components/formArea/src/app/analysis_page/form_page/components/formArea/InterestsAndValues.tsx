@@ -1,13 +1,21 @@
 "use client";
 
+import useDiangnosisForm from "@/app/diagnosisPage/hooks/useDiangnosisForm";
 import { valesArray } from "@/app/diagnosisPage/selectOptions";
+import type { storeType } from "@/app/types/ReduxTypes";
+import { useSelector } from "react-redux";
 
 // import { valesArray } from '@/app/analysis_page/selectOption'
 // import useAnalysisForm from '../../Hooks/useAnalysisForm'
 
 const InterestsAndValues = () => {
-	// const { checkValuesSave, handleAddValue, valueList, addValue, handleChangeInput, inputState } =
-	//   useAnalysisForm()
+	const inputDatas = useSelector(
+		(state: storeType) => state.diagnosisFormInput,
+	);
+	const sendDatas = useSelector((state: storeType) => state.diagnosisSendData);
+	const { handleChangeInput, valueList, addArrayValue, checkValuesFunc } =
+		useDiangnosisForm();
+
 	return (
 		<>
 			<div className="flex w-full flex-col gap-3 border-b-2 py-1 lg:flex-row ">
@@ -22,20 +30,20 @@ const InterestsAndValues = () => {
 							placeholder="業界や業種、学問、芸術など"
 							className="input input-bordered input-info w-80 max-w-xs dark:bg-gray-600"
 							name="interests"
-							// value={inputState.interests}
-							// onChange={(e) => handleChangeInput(e)}
+							value={inputDatas.interests}
+							onChange={(e) => handleChangeInput(e)}
 							// onKeyDown={(e) => handleAddValue('interests', e)}
 						/>
 						<button
 							className="btn btn-square btn-info text-white "
 							type="button"
-							// onClick={() => addValue('interests')}
+							onClick={() => addArrayValue("interests")}
 						>
 							追加
 						</button>
 					</div>
 				</label>
-				{/* {valueList('interests')} */}
+				{valueList("interests")}
 			</div>
 
 			<div className="flex w-full flex-col gap-3 border-b-2 py-1 lg:flex-row ">
@@ -67,16 +75,22 @@ const InterestsAndValues = () => {
 									</span>
 									<input
 										type="checkbox"
-										// value={value.value}
+										value={value.value}
+										// biome-ignore lint/complexity/noUselessTernary: <explanation>
+										checked={
+											sendDatas.values.find((e) => e === value.value)
+												? true
+												: false
+										}
 										className="checkbox-info checkbox mr-1"
-										// onChange={(e) => checkValuesSave('values', e)}
+										onChange={(e) => checkValuesFunc("values", e)}
 									/>
 								</label>
 							))}
 						</div>
 					</div>
 				</label>
-				{/* {valueList('values')} */}
+				{valueList("values")}
 			</div>
 		</>
 	);
