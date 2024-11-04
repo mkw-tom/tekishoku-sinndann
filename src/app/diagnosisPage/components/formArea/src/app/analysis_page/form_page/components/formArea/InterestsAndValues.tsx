@@ -35,7 +35,7 @@ const InterestsAndValues = () => {
 							// onKeyDown={(e) => handleAddValue('interests', e)}
 						/>
 						<button
-							className="btn btn-square btn-info text-white "
+							className="btn btn-square btn-info text-white  border-2"
 							type="button"
 							onClick={() => addArrayValue("interests")}
 						>
@@ -54,23 +54,20 @@ const InterestsAndValues = () => {
 					<span className=" inline-block w-52 px-2">
 						6. 大事にしている価値観
 					</span>
-					<label
-						htmlFor="my_modal_6"
-						className="btn btn-info w-80 border-info bg-inherit text-info hover:bg-inherit bg-white"
-					>
+					<label htmlFor="my_modal_6" className="btn btn-info w-80 text-white">
 						項目をチェック
 					</label>
 					<input type="checkbox" id="my_modal_6" className="modal-toggle" />
 					{/* biome-ignore lint/a11y/useSemanticElements: <explanation> */}
 					<div className="modal" role="dialog">
-						<div className="modal-box dark:bg-gray-500 ">
+						<div className="modal-box dark:bg-gray-700  ">
 							{valesArray?.map((value) => (
 								<label
 									key={value.text}
 									htmlFor=""
 									className="label cursor-pointer"
 								>
-									<span className="label-text dark:text-base-200">
+									<span className="label-text dark:text-white">
 										{value.text}
 									</span>
 									<input
