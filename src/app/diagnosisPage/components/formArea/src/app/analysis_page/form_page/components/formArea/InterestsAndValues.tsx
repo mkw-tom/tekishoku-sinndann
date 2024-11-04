@@ -76,8 +76,8 @@ const InterestsAndValues = () => {
 									<input
 										type="checkbox"
 										value={value.value}
-										// biome-ignore lint/complexity/noUselessTernary: <explanation>
 										checked={
+											// biome-ignore lint/complexity/noUselessTernary: <explanation>
 											sendDatas.values.find((e) => e === value.value)
 												? true
 												: false
