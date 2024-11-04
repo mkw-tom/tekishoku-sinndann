@@ -40,7 +40,7 @@ export interface userDiagnosisType {
 	jobProposals: string[];
 	commonPoints: string[];
 	skillScores: skillScoresType[];
-	timestamp: string;
+	timestamp: number;
 }
 
 interface skillScoresType {

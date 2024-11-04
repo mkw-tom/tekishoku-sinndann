@@ -8,7 +8,7 @@ const userDiagnosisSlice = createSlice({
 		jobProposals: [],
 		commonPoints: [],
 		skillScores: [],
-		timestamp: "",
+		timestamp: new Date().getTime(),
 	},
 	reducers: {
 		setUserDiagnosis: (

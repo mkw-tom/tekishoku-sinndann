@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
   //   turbo: false,
   // },
   // output: "export",
-  distDir: "dist",
+  // distDir: "dist",
  
 };
 

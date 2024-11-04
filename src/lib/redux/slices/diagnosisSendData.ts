@@ -32,19 +32,20 @@ const diagnosisSendDataSlice = createSlice({
 		teamRole: "",
 	},
 	reducers: {
+		clearSendData: (state: DiagnosisSendDataType) => {
+			state.mbti = "";
+			state.skills = [];
+			state.certifications = [];
+			state.experience = [];
+			state.interests = [];
+			state.values = [];
+			state.workStyle = [];
+			state.teamRole = "";
+		},
 		setArrayValue: (
 			state: DiagnosisSendDataType,
 			action: PayloadAction<{ field: ArrayFields; value: string }>,
 		) => {
-			// state._id = action.payload._id;
-			// state.mbti = action.payload.mbti;
-			// state.skills = action.payload.skills;
-			// state.certifications = action.payload.certifications;
-			// state.experience = action.payload.experience;
-			// state.interests = action.payload.interests;
-			// state.values = action.payload.values;
-			// state.workStyle = action.payload.workStyle;
-			// state.teamRole = action.payload.teamRole;
 			const { field, value } = action.payload;
 
 			state[field].push(value);
@@ -74,6 +75,11 @@ const diagnosisSendDataSlice = createSlice({
 	},
 });
 
-export const { setArrayValue, removeArrayValue, setMBTI, setTeamRole } =
-	diagnosisSendDataSlice.actions;
+export const {
+	clearSendData,
+	setArrayValue,
+	removeArrayValue,
+	setMBTI,
+	setTeamRole,
+} = diagnosisSendDataSlice.actions;
 export default diagnosisSendDataSlice.reducer;

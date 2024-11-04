@@ -5,7 +5,7 @@ export interface userDiagnosisType {
 	jobProposals: string[];
 	commonPoints: string[];
 	skillScores: skillScoresType[];
-	timestamp: string;
+	timestamp: number;
 }
 
 interface skillScoresType {
@@ -23,7 +23,7 @@ const DiagnosisScehma = new Schema<userDiagnosisType>({
 	jobProposals: { type: [String] },
 	commonPoints: { type: [String] },
 	skillScores: { type: [SKillScoreSchema] },
-	timestamp: { type: String },
+	timestamp: { type: Number },
 });
 
 export const DiagnosissModel =

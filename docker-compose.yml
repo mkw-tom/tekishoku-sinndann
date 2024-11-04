@@ -1,4 +1,4 @@
-version: '3.8'
+version: '3'
 
 services:
   app:
@@ -6,7 +6,7 @@ services:
       context: .  # Dockerfileの場所を指定
     container_name: nextjs-app
     ports:
-      - "3000:3000"  # ホストのポート3000をコンテナのポート3000にマッピング
+      - "3002:3000"  # ホストのポート3000をコンテナのポート3000にマッピング
     depends_on:
       - mongo  # MongoDBサービスが先に起動するように指定
     environment:
@@ -14,6 +14,7 @@ services:
       API_URL: ${NEXT_PUBLIC_API_URL}
     volumes:
       - .:/app  # ホストのソースコードをコンテナと共有
+    command: sh -c "npm run dev"
 
   mongo:
     image: mongo:latest  # MongoDBのイメージを指定

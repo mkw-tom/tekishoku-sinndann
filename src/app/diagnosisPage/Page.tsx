@@ -1,5 +1,6 @@
 "use client";
 import { useRouter } from "next/navigation";
+import FormAction from "./components/fetchAction/FormAction";
 import CertificationsAndExperience from "./components/formArea/src/app/analysis_page/form_page/components/formArea/CertificationsAndExperience";
 import InterestsAndValues from "./components/formArea/src/app/analysis_page/form_page/components/formArea/InterestsAndValues";
 import MBTIandSkills from "./components/formArea/src/app/analysis_page/form_page/components/formArea/MBTIandSkills";
@@ -18,8 +19,8 @@ const Page = () => {
 	};
 
 	return (
-		<main className="w-full h-auto bg-gradient-to-tr to-info from-success ">
-			<div className="mx-5 h-full pb-48 pt-20 md:mx-10 w-full">
+		<main className="w-hull h-auto bg-gradient-to-tr to-info from-success ">
+			<div className="h-full pb-48 pt-20 px-5 md:px-10">
 				{/* <div className="flex w-full items-center justify-between">
 				
 				</div> */}
@@ -27,7 +28,7 @@ const Page = () => {
 					・８つの項目を入力してください。
 					<button
 						type="button"
-						className="sm:text-md btn-link w-36  text-sm text-gray-700 hover:opacity-70 dark:text-base-300"
+						className="sm:text-md btn-link w-36  text-sm text-white hover:opacity-70 "
 						onClick={handlePageBack}
 					>
 						ホームに戻る
@@ -43,7 +44,7 @@ const Page = () => {
 					<WorkStyleAndTeamRole />
 				</form>
 
-				{/* <FormAction /> */}
+				<FormAction />
 			</div>
 		</main>
 	);

@@ -10,7 +10,7 @@ const LoginForm = () => {
 				<button type="button" className="border-b-4 px-3 border-info text-info">
 					新規登録
 				</button>
-				<button type="button" className=" px-3">
+				<button type="button" className=" px-3 ">
 					ログイン
 				</button>
 			</div>
