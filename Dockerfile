@@ -1,26 +1,23 @@
-# Dockerfile
 
 # ベースイメージとしてNode.jsを使用
 FROM node:20.17.0
 
-ENV NODE_ENV=production
+# 開発モードの環境変数を設定
+ENV NODE_ENV=development
 
 # 作業ディレクトリを設定
 WORKDIR /app
 
 # 依存関係のファイルをコピーしてインストール
-COPY package.json ./
-COPY package-lock.json ./
-RUN npm install --only=production
+COPY package.json package-lock.json ./
+RUN npm install  # 開発依存も含めてインストール
 
-# アプリのソースコードをコピー
+# ソースコードをコピー
 COPY . .
-
-# Next.jsアプリをビルド
-RUN npm run build
 
 # ポート3000をエクスポート
 EXPOSE 3000
 
-# アプリケーションを起動
+# 開発モードでアプリケーションを起動
 CMD ["npm", "run", "dev"]
+

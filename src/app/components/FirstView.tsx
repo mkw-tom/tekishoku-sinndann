@@ -18,9 +18,9 @@
 // import ButtonTopText from "./ButtonTopText";
 // import MigrateButton from "./MigrateButton";
 import React from "react";
-import { FaCheckCircle, FaCircle, FaGithub, FaUser } from "react-icons/fa";
+import { FaCheckCircle, FaGithub, FaUser } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
-import { MdEmail, MdLock, MdPassword } from "react-icons/md";
+import { MdEmail, MdLock } from "react-icons/md";
 
 const FirstView = () => {
 	return (
