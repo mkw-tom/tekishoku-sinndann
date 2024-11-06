@@ -53,6 +53,7 @@ export type storeType = {
 	diagnosisSendData: DiagnosisSendDataType;
 	auth: UserType;
 	userDiagnosis: userDiagnosisType;
+	loginToggle: { login: boolean };
 };
 
 export type ArrayFields =
