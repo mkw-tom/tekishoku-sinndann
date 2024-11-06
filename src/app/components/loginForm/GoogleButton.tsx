@@ -13,7 +13,7 @@ const GoogleButton = () => {
 	return (
 		<button
 			type="button"
-			className="btn  btn-xl w-full text-lg"
+			className="btn  btn-xl w-full text-md"
 			onClick={handleLogin}
 		>
 			<FcGoogle className="w-7 h-7" />

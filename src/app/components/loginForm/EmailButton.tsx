@@ -42,7 +42,7 @@ const EmailButton = ({
 	return (
 		<button
 			type="button"
-			className="btn btn-xl w-full text-lg"
+			className="btn btn-xl w-full text-md"
 			onClick={emailLogin}
 		>
 			<MdEmail className="w-7 h-7 " />

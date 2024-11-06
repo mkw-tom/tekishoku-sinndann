@@ -2,7 +2,7 @@
 import type { storeType } from "@/app/types/ReduxTypes";
 import Link from "next/link";
 import React from "react";
-import { FaPerson } from "react-icons/fa6";
+import { CgSearchFound } from "react-icons/cg";
 import { useSelector } from "react-redux";
 import CommonPoint from "./CommonPoint";
 import Job from "./Job";
@@ -24,7 +24,7 @@ const ShowResult = () => {
 				<div className="mt-5">
 					<div className="">診断結果がありません💦</div>
 					<Link href="/diagnosisPage" className="btn btn-md mt-4 shadow-md">
-						<FaPerson className="w-5 h-5" />
+						<CgSearchFound className="w-5 h-5" />
 						<span>今すぐ診断</span>
 					</Link>
 				</div>

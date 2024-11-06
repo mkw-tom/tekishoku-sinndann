@@ -4,9 +4,9 @@ import GitHubButton from "./GitHubButton";
 import GoogleButton from "./GoogleButton";
 import LoginSwitch from "./LoginSwitch";
 
-const LoginForm = () => {
+const MoealLoginForm = () => {
 	return (
-		<section className="hidden lg:flex flex-col gap-10 lg:w-4/12 h-lvh bg-base-100 bg-opacity-60">
+		<div className="flex flex-col gap-10 w-full h-lvh ">
 			<LoginSwitch />
 			<div className="flex flex-col gap-3">
 				<div className="w-7/12 mx-auto">
@@ -29,8 +29,8 @@ const LoginForm = () => {
 
 				<EmailIForm />
 			</div>
-		</section>
+		</div>
 	);
 };
 
-export default LoginForm;
+export default MoealLoginForm;
