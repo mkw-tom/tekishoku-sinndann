@@ -1,7 +1,7 @@
 import mongoose, { Schema } from "mongoose";
 
 interface IUser extends Document {
-	// customId: string;
+	customId: string;
 	username: string;
 	password: string;
 	profilePicture: string;
@@ -15,11 +15,11 @@ const UserSchema = new Schema<IUser>(
 		// _id: {
 		//   type: String,
 		// },
-		// customId: {
-		// 	type: String,
-		// 	require: true,
-		// 	unique: true,
-		// },
+		customId: {
+			type: String,
+			require: true,
+			unique: true,
+		},
 		username: {
 			type: String,
 			required: true,
@@ -35,7 +35,7 @@ const UserSchema = new Schema<IUser>(
 		},
 		profilePicture: {
 			type: String,
-			default: "/noAvatar.png",
+			default: "/default_icon.png",
 		},
 		email: {
 			type: String,
