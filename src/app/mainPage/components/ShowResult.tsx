@@ -12,7 +12,7 @@ const ShowResult = () => {
 	const diagnosis = useSelector((state: storeType) => state.userDiagnosis);
 	return (
 		<>
-			{diagnosis ? (
+			{diagnosis.userId ? (
 				<div className="flex w-full flex-col justify-between gap-5 px-1 pt-5 lg:flex-row">
 					<div className="flex w-full flex-col gap-20 rounded-md bg-green-100 bg-opacity-60 p-5 lg:w-1/2">
 						<Job />

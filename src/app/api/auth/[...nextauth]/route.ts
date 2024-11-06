@@ -8,6 +8,7 @@ import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import GitHubProvider from "next-auth/providers/github";
 import GoogleProvider from "next-auth/providers/google";
+import { v4 as uuidv4 } from "uuid";
 
 const handler = NextAuth({
 	providers: [
@@ -50,7 +51,7 @@ const handler = NextAuth({
 					const hashedAndSaltPassword = await hash(credentials.password, 12);
 
 					const newUser = new UserModel({
-						// customId: uuidv4(),
+						customId: uuidv4(),
 						username: credentials.username,
 						email: credentials.email,
 						password: hashedAndSaltPassword,
