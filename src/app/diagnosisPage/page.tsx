@@ -6,12 +6,6 @@ import CertificationsAndExperience from "./components/formArea/src/app/analysis_
 import InterestsAndValues from "./components/formArea/src/app/analysis_page/form_page/components/formArea/InterestsAndValues";
 import MBTIandSkills from "./components/formArea/src/app/analysis_page/form_page/components/formArea/MBTIandSkills";
 import WorkStyleAndTeamRole from "./components/formArea/src/app/analysis_page/form_page/components/formArea/WorkStyleAndTeamRole";
-// import FormAction from "./components/fetchActions/FormAction";
-// import CertificationsAndExperience from "./components/formArea/CertificationsAndExperience";
-// import InterestsAndValues from "./components/formArea/InterestsAndValues";
-// import MBTIandSkills from "./components/formArea/MBTIandSkills";
-// import WorkStyleAndTeamRole from "./components/formArea/WorkStyleAndTeamRole";
-// import useAnalysisForm from "./Hooks/useAnalysisForm";
 
 const Page = () => {
 	const router = useRouter();
