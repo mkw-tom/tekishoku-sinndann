@@ -1,9 +1,12 @@
 "use client";
+import type { storeType } from "@/app/types/ReduxTypes";
 import { signIn } from "next-auth/react";
 import React from "react";
 import { FcGoogle } from "react-icons/fc";
+import { useSelector } from "react-redux";
 
 const GoogleButton = () => {
+	const login = useSelector((state: storeType) => state.loginToggle);
 	const handleLogin = async () => {
 		await signIn("github", { callbackUrl: "/mainPage" });
 	};
@@ -14,7 +17,7 @@ const GoogleButton = () => {
 			onClick={handleLogin}
 		>
 			<FcGoogle className="w-7 h-7" />
-			Googleで新規登録
+			Googleで{login.login ? "ログイン" : "新規登録"}
 		</button>
 	);
 };
