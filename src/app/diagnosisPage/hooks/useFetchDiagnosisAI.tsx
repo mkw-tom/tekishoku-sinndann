@@ -59,8 +59,11 @@ const useFetchDiagnosisAI = () => {
 				setError(true);
 				throw new Error(errorData.error || "An error occurred");
 			}
+			setTimeout(() => {
+				setSuccess(true);
+				setLoading(false);
+			}, 5000);
 
-			setSuccess(true);
 			const result = await res.json();
 
 			// formDataDispatch({ type: 'CLEAR'})
@@ -80,7 +83,6 @@ const useFetchDiagnosisAI = () => {
 			console.log("faild fetch", error);
 		} finally {
 			dispatch(clearSendData());
-			setLoading(false);
 		}
 	};
 

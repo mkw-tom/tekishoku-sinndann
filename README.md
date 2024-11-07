@@ -1,37 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# WorkME　　-「MBTI」と「スキル・志向性」によるAI適職診断-
 
-## Getting Started
+[アプリを開く](https://shuukatu-app.vercel.app)
 
-First, run the development server:
+## 技術スタック
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<img alt="my skills" src="https://skillicons.dev/icons?theme=dark&perline=7&i=ts,next,mongodb,tailwindcss,redux,postman,vercel,docker" />
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### その他ライブラリ
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- OpenAI API ⭐
+- NextAuth (OAuth・JWT)
+- Chart.js
+- mongoose
+- React Hook Form
+- Zod
+- daysyUI
+- react-icons
+  <br/>
+  <br/>
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## アプリの機能
 
-## Learn More
+### ユーザーの「MBTI」と「スキル・志向性」をもとにAIが適職診断
 
-To learn more about Next.js, take a look at the following resources:
+- 1. 「MBTI」と「スキル・志向性」に関する８つの項目を入力
+- 2. 1の情報をAI（OpenAIAPI）のプロンプトに読み込ませる
+- 3. AIの診断結果から「５つのマッチした職業」・「５つの職業の共通特徴」・「能力スコア」を表示
+  <br/>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 画面遷移
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# tekishoku-sinndann
+- #### トップ
+![top](public/display-top.jpg)
+- #### メインページ
+![login](public/display-main.jpg)
+- #### 診断フォーム
+![form](public/display-form1.jpg)
+![form2](public/display-form2.jpg)
+- #### AI診断中
+![loading](public/display-loading.jpg)
+- #### AI診断成功
+![success](public/display-success.jpg)
+- #### AIの診断結果
+![result](public/display-result.jpg)
