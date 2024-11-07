@@ -1,6 +1,5 @@
 import React from "react";
 import { CgSearchFound } from "react-icons/cg";
-import LoginForm from "./loginForm/LoginForm";
 import MoealLoginForm from "./loginForm/MoealLoginForm";
 
 const OpenLoginForm = () => {
@@ -9,7 +8,7 @@ const OpenLoginForm = () => {
 		modal?.showModal();
 	};
 	return (
-		<div className="w-full flex justify-center">
+		<div className="w-full flex justify-center lg:hidden">
 			<button type="button" className="btn mx-auto" onClick={OpenLoginFormFunc}>
 				<CgSearchFound className="h-5 w-5" />
 				今すぐ診断する
