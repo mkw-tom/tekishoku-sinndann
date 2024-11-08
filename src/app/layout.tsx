@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import NextAuthProvider from "@/lib/nextauth/NextauthProvider";
+
 import SesstionChecker from "@/lib/nextauth/SesstionChecker";
+import NextAuthProvider from "@/lib/nextauth/nextauthProvider";
 import ReduxProvider from "@/lib/redux/ReduxProvider";
 // import Header from "./components/Header";
 

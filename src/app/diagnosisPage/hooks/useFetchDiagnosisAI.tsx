@@ -23,7 +23,6 @@ const useFetchDiagnosisAI = () => {
 	};
 
 	const fetchDiagnasis = async () => {
-		setLoading(true);
 		const {
 			mbti,
 			skills,
@@ -34,6 +33,21 @@ const useFetchDiagnosisAI = () => {
 			workStyle,
 			teamRole,
 		} = sendData;
+
+		if (
+			!mbti ||
+			!skills ||
+			!certifications ||
+			!experience ||
+			!values ||
+			!interests ||
+			!workStyle ||
+			!teamRole
+		) {
+			return alert("入力されていない項目があります");
+		}
+
+		setLoading(true);
 
 		try {
 			const res = await fetch("api/diagnosisAI", {
@@ -59,10 +73,9 @@ const useFetchDiagnosisAI = () => {
 				setError(true);
 				throw new Error(errorData.error || "An error occurred");
 			}
-			setTimeout(() => {
-				setSuccess(true);
-				setLoading(false);
-			}, 5000);
+
+			setSuccess(true);
+			setLoading(false);
 
 			const result = await res.json();
 
