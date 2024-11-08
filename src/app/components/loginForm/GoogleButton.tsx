@@ -8,7 +8,7 @@ import { useSelector } from "react-redux";
 const GoogleButton = () => {
 	const login = useSelector((state: storeType) => state.loginToggle);
 	const handleLogin = async () => {
-		await signIn("github", { callbackUrl: "/mainPage" });
+		await signIn("google", { callbackUrl: "/mainPage" });
 	};
 	return (
 		<button
