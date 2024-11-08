@@ -116,7 +116,7 @@ const handler = NextAuth({
 
 				if (!existUser) {
 					const newUser = new UserModel({
-						// customId: uuidv4(),
+						customId: uuidv4(),
 						username: user?.name || "unknown",
 						email: user?.email,
 						password: await hash(Math.random().toString(36).slice(-8), 12),
