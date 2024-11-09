@@ -43,10 +43,10 @@ const ShareModal = () => {
 					title={QUOTE}
 					className="flex flex-col items-center"
 				>
-					<button type="button" className="flex items-center btn btn-outline">
+					<p className="flex items-center btn btn-outline">
 						{/* <BsTwitterX /> */}
 						<span>あなたの適職を投稿する</span>
-					</button>
+					</p>
 				</TwitterShareButton>
 			</div>
 		</div>
