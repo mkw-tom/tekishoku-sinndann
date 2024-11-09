@@ -1,8 +1,9 @@
-import Link from "next/link";
+// import Link from "next/link";
 import React from "react";
 import { CgSearchFound } from "react-icons/cg";
 import Header from "../components/Header";
 import ReDiagnosisButton from "./components/ReDiagnosisButton";
+import ShareButton from "./components/ShareButton";
 import ShowResult from "./components/ShowResult";
 import WarnWrite from "./components/WarnWrite";
 
@@ -21,12 +22,13 @@ const Page = () => {
 							</span>
 							<div className="flex gap-2 pb-1">
 								<ReDiagnosisButton />
-								<Link
+								{/* <Link
 									href="/diagnosisPage"
 									className="btn btn-xs sm:btn-sm md:btn-md "
 								>
 									シェア
-								</Link>
+								</Link> */}
+								<ShareButton />
 							</div>
 						</h2>
 						<ShowResult />
