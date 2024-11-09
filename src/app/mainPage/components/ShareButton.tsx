@@ -23,7 +23,7 @@ const ShareButton = () => {
 					シェア
 				</button>
 				<dialog id="my_modal_4" className="modal">
-					<div className="modal-box w-full h-[170px] bg-base-100">
+					<div className="modal-box w-[370px] h-[240px] bg-base-100">
 						<form method="dialog">
 							{/* if there is a button in form, it will close the modal */}
 							{/* biome-ignore lint/a11y/useButtonType: <explanation> */}
