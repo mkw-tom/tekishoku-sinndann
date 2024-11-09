@@ -152,6 +152,7 @@ export async function POST(req: NextRequest) {
 			jobProposals: parsedData.jobProposals,
 			commonPoints: parsedData.commonPoints,
 			skillScores: parsedData.skillScores,
+			timestamp: new Date().getTime(),
 		};
 
 		//mongoDBに保存してまーす

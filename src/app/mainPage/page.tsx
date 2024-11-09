@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { CgSearchFound } from "react-icons/cg";
 import Header from "../components/Header";
+import ReDiagnosisButton from "./components/ReDiagnosisButton";
 import ShowResult from "./components/ShowResult";
 import WarnWrite from "./components/WarnWrite";
 
@@ -19,12 +20,7 @@ const Page = () => {
 								AIの診断結果
 							</span>
 							<div className="flex gap-2 pb-1">
-								<Link
-									href="/diagnosisPage"
-									className="btn btn-xs sm:btn-sm md:btn-md"
-								>
-									再診断
-								</Link>
+								<ReDiagnosisButton />
 								<Link
 									href="/diagnosisPage"
 									className="btn btn-xs sm:btn-sm md:btn-md "

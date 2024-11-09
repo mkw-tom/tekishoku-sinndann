@@ -87,7 +87,7 @@ const useFetchDiagnosisAI = () => {
 					commonPoints: result.commonPoints,
 					jobProposals: result.jobProposals,
 					skillScores: result.skillScores,
-					timestamp: new Date().getTime(),
+					timestamp: result.timestamp,
 				}),
 			);
 		} catch (error) {
@@ -96,6 +96,8 @@ const useFetchDiagnosisAI = () => {
 			console.log("faild fetch", error);
 		} finally {
 			dispatch(clearSendData());
+			const currentTime = new Date().getTime().toString();
+			localStorage.setItem("lastDiagnosis", currentTime);
 		}
 	};
 
