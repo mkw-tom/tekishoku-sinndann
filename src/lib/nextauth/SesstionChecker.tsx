@@ -46,7 +46,7 @@ const SesstionChecker = ({ children }: { children: ReactNode }) => {
 						commonPoints: jsonData?.diagnosisData.commonPoints,
 						jobProposals: jsonData?.diagnosisData.jobProposals,
 						skillScores: jsonData?.diagnosisData.skillScores,
-						timestamp: jsonData?.diagnosisData.createdAt,
+						timestamp: jsonData?.diagnosisData.timestamp,
 					}),
 				);
 			}
