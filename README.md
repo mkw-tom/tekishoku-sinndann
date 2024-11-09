@@ -1,6 +1,6 @@
-# WorkME　　-「MBTI」と「スキル・志向性」によるAI適職診断-
+# WorkME　　- AI適職診断 -
 
-[アプリを開く](https://shuukatu-app.vercel.app)
+[アプリを開く](https://tekishoku-sinndann.vercel.app)
 
 ## 技術スタック
 
@@ -27,23 +27,24 @@
 - 1. 「MBTI」と「スキル・志向性」に関する８つの項目を入力
 - 2. 1の情報をAI（OpenAIAPI）のプロンプトに読み込ませる
 - 3. AIの診断結果から「５つのマッチした職業」・「５つの職業の共通特徴」・「能力スコア」を表示
+- 4. 診断結果を「x」でシェア
   <br/>
 
 
 ## 画面遷移
 
 - #### トップ
-![top](public/display-top.jpg)
+![top](public/display-top.jpeg)
 - #### メインページ
 ![login](public/display-main.jpeg)
 - #### 診断フォーム
-![form](public/display-form1.jpg)
-![form2](public/display-form2.jpg)
+![form](public/display-form1.jpeg)
+![form2](public/display-form2.jpeg)
 - #### AI診断中
-![loading](public/display-loading.jpg)
+![loading](public/display-loading.jpeg)
 - #### AI診断成功
-![success](public/display-success.jpg)
+![success](public/display-success.jpeg)
 - #### AIの診断結果
-![result](public/display-result.jpg)
+![result](public/display-result.jpeg)
 - #### シェア
-![share](public/display-shere.jpeg)
+![share](public/display-share.jpeg)
