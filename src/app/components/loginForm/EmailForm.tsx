@@ -75,7 +75,7 @@ const EmailIForm = () => {
 	return (
 		// <FormProvider {...methods}>
 		<div
-			className="w-7/12 mx-auto flex flex-col gap-3"
+			className="w-9/12 lg:w-7/12 mx-auto flex flex-col gap-3"
 			// onSubmit={handleSubmit(onSubmit)}
 		>
 			{/* <EmailFormInputs />  */}

@@ -12,12 +12,9 @@ const RightView = () => {
 						<img
 							src="/file.png"
 							alt="ロゴ"
-							className="size-8 md:size-12 border-2 rounded-md border-white"
+							className="size-8 md:size-12 border-2 rounded-md border-base-100 dark:bg-base-100 shadow-xle"
 						/>
-						<div>
-							<span className="">Work</span>
-							<span className="">ME</span>
-						</div>
+						<span className="text-base-100 tracking-widest">WorkME</span>
 					</h1>
 					<p className="text-md md:text-2xl mx-auto mt-3 text-base-300">
 						「MBTI」 × 「スキル・志向性」によるAI適職診断

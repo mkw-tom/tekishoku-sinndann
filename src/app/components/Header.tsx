@@ -7,11 +7,11 @@ const Header = () => {
 	return (
 		<header className="fixed top-0 right-0 left-0  pt-3">
 			<div className="mx-8 flex justify-between">
-				<h1 className="text-3xl font-bold font-mono tracking-wider text-white flex items-center gap-2">
+				<h1 className="text-3xl font-bold font-mono tracking-wider text-base-100 flex items-center gap-2">
 					<img
 						src="/file.png"
 						alt="ロゴ"
-						className="w-8 h-8 border-2 rounded-md border-white"
+						className="w-8 h-8 border-2 rounded-md border-base-100 dark:bg-base-100 shadow-xl"
 					/>
 					<span>WorkME</span>
 				</h1>

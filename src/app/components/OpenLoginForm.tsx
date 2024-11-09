@@ -14,7 +14,7 @@ const OpenLoginForm = () => {
 				今すぐ診断する
 			</button>
 			<dialog id="my_modal_3" className="modal">
-				<div className="modal-box w-full h-[700px] bg-base-100">
+				<div className="modal-box w-11/12 h-[700px] bg-base-100">
 					<form method="dialog">
 						{/* if there is a button in form, it will close the modal */}
 						{/* biome-ignore lint/a11y/useButtonType: <explanation> */}
