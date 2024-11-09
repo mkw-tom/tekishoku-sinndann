@@ -33,7 +33,7 @@ const ReDiagnosisButton = () => {
 		<>
 			<button
 				type="button"
-				className={`${userDiagnosis ? "btn btn-xs sm:btn-sm md:btn-md" : "btn btn-disabled"}`}
+				className={`${userDiagnosis.userId === "" ? "btn btn-disabled" : "btn btn-xs sm:btn-sm md:btn-md"}`}
 				onClick={ReDiagnosisFunc}
 			>
 				再診断

@@ -1,8 +1,11 @@
 "use client";
 
+import type { storeType } from "@/app/types/ReduxTypes";
+import { useSelector } from "react-redux";
 import ShareModal from "./ShareModal";
 
 const ShareButton = () => {
+	const userDiagnosis = useSelector((state: storeType) => state.userDiagnosis);
 	const OpenLoginFormFunc = () => {
 		const modal = document.getElementById("my_modal_4") as HTMLDialogElement;
 		modal?.showModal();
@@ -12,7 +15,8 @@ const ShareButton = () => {
 			<div className="w-full flex justify-center ">
 				<button
 					type="button"
-					className="btn mx-auto"
+					// className="btn mx-auto"
+					className={`${userDiagnosis.userId === "" ? "btn btn-disabled" : "btn btn-xs sm:btn-sm md:btn-md"}`}
 					onClick={OpenLoginFormFunc}
 				>
 					{/* <CgSearchFound className="h-5 w-5" /> */}
