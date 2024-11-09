@@ -17,11 +17,6 @@ const ShareModal = () => {
   ${diagnosisList}
   
   ↓↓今すぐ診断↓↓
-  ${URL}
-  
-  #WorkME
-  #AI適職診断
-  #mbti
   `;
 
 	return (
