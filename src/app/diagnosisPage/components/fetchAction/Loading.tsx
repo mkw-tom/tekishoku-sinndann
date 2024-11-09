@@ -8,7 +8,7 @@ const Loading = () => {
 					AIが解析中
 				</span>
 				{/* biome-ignore lint/style/useSelfClosingElements: <explanation> */}
-				<span className="loading loading-bars loading-md text-base-100 lg:loading-lg dark:text-info"></span>
+				<span className="loading loading-bars loading-lg text-base-100  dark:text-info"></span>
 			</div>
 		</div>
 	);

@@ -16,6 +16,7 @@
 - Zod
 - daysyUI
 - react-icons
+- react-share
   <br/>
   <br/>
 
@@ -34,7 +35,7 @@
 - #### トップ
 ![top](public/display-top.jpg)
 - #### メインページ
-![login](public/display-main.jpg)
+![login](public/display-main.jpeg)
 - #### 診断フォーム
 ![form](public/display-form1.jpg)
 ![form2](public/display-form2.jpg)
@@ -44,3 +45,5 @@
 ![success](public/display-success.jpg)
 - #### AIの診断結果
 ![result](public/display-result.jpg)
+- #### シェア
+![share](public/display-shere.jpeg)
