@@ -15,12 +15,17 @@ import {
 const ShareModal = () => {
 	const user = useSelector((state: storeType) => state.auth);
 	const userDiagnosis = useSelector((state: storeType) => state.userDiagnosis);
-	const diagnosisResults = userDiagnosis.jobProposals
-		.map((result: string, index: number) => `${index + 1}. ${result}`)
+	const diagnosisList = userDiagnosis.jobProposals
+		.map((job: string, index: number) => `${index + 1}. ${job}`)
 		.join("\n");
 
-	const URL = "https://example.com/";
-	const QUOTE = `【WorkME -AI適職診断-】\n${user.username}さんの診断結果:\n${diagnosisResults}`;
+	const URL = "https://tekishoku-sinndann.vercel.app";
+	const QUOTE = `【 WorkME -AI適職診断- 】
+  ${user.username}さんの診断結果
+  ${diagnosisList}
+  
+  ↓↓今すぐ診断↓↓
+  ${URL}`;
 
 	return (
 		<div className="flex flex-col gap-5 items-center">
