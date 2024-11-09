@@ -16,7 +16,7 @@ const ShareButton = () => {
 				<button
 					type="button"
 					// className="btn mx-auto"
-					className={`${userDiagnosis.userId === "" ? "btn btn-disabled" : "btn btn-xs sm:btn-sm md:btn-md"}`}
+					className={`${userDiagnosis.userId === "" ? "btn btn-disabled tn-xs sm:btn-sm md:btn-md " : "btn btn-xs sm:btn-sm md:btn-md"}`}
 					onClick={OpenLoginFormFunc}
 				>
 					{/* <CgSearchFound className="h-5 w-5" /> */}
