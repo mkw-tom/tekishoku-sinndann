@@ -1,16 +1,8 @@
 import type { storeType } from "@/app/types/ReduxTypes";
 import React from "react";
+import { BsTwitterX } from "react-icons/bs";
 import { useSelector } from "react-redux";
-import {
-	FacebookIcon,
-	FacebookShareButton,
-	HatenaIcon,
-	HatenaShareButton,
-	LineIcon,
-	LineShareButton,
-	TwitterIcon,
-	TwitterShareButton,
-} from "react-share";
+import { TwitterShareButton } from "react-share";
 
 const ShareModal = () => {
 	const user = useSelector((state: storeType) => state.auth);
@@ -25,46 +17,42 @@ const ShareModal = () => {
   ${diagnosisList}
   
   ↓↓今すぐ診断↓↓
-  ${URL}`;
+  ${URL}
+  
+  #WorkME
+  #AI適職診断
+  #mbti
+  `;
 
 	return (
 		<div className="flex flex-col gap-5 items-center">
-			<h2>SNSで適職をシェア</h2>
-			<div className="flex gap-5 items-end justify-between mx-auto w-11/12 ">
-				<FacebookShareButton
+			{/* <h2>SNSで適職をシェア</h2> */}
+			<div className="flex flex-col gap-5 items-center justify-center mx-auto w-11/12 ">
+				{/* <FacebookShareButton
 					url={URL}
 					title={QUOTE}
 					className="flex flex-col items-center gap-1"
 				>
 					<FacebookIcon size={50} round />
 					<p>facebook</p>
-				</FacebookShareButton>
+				</FacebookShareButton> */}
+				<p className="text-lg flex items-center gap-1 mb-3">
+					<BsTwitterX />
+					<span>で診断結果をシェアしよう！</span>
+				</p>
+				<div className="bg-black w-16 h-16 flex items-center justify-center text-3xl rounded-full">
+					<BsTwitterX className="bg-black text-white" />
+				</div>
 				<TwitterShareButton
 					url={URL}
 					title={QUOTE}
-					className="flex flex-col items-center gap-1"
+					className="flex flex-col items-center"
 				>
-					<TwitterIcon size={50} round />
-					<p>Twitter</p>
+					<button type="button" className="flex items-center btn btn-outline">
+						{/* <BsTwitterX /> */}
+						<span>あなたの適職を投稿する</span>
+					</button>
 				</TwitterShareButton>
-				<LineShareButton
-					url={URL}
-					title={QUOTE}
-					className="flex flex-col items-center gap-1"
-				>
-					<LineIcon size={50} round />
-					<p>Line</p>
-				</LineShareButton>
-				<HatenaShareButton
-					url={URL}
-					title={QUOTE}
-					windowWidth={660}
-					windowHeight={460}
-					className="flex flex-col items-center gap-1"
-				>
-					<HatenaIcon size={50} round />
-					<p>はてな</p>
-				</HatenaShareButton>
 			</div>
 		</div>
 	);
