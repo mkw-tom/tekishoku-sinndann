@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 		url: "https://tekishoku-sinndann.vercel.app",
 		images: [
 			{
-				url: "/WM.png",
+				url: "/W.png",
 				width: 800,
 				height: 600,
 				alt: "WorkMEのロゴ",
@@ -38,11 +38,11 @@ export const metadata: Metadata = {
 		card: "summary_large_image",
 		title: "WorkME",
 		description: "「MBTI」と「スキル・志向性」によるAI適職診断",
-		images: ["/WM.png"],
+		images: ["/W.png"],
 	},
 	icons: {
 		icon: "favicon.ico", // 一般的なファビコン（favicon.ico）
-		apple: "/WM.png", // Apple Touch Icon
+		apple: "/W.png", // Apple Touch Icon
 	},
 };
 
