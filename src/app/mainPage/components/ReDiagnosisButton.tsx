@@ -13,7 +13,7 @@ const ReDiagnosisButton = () => {
 	const ReDiagnosisFunc = () => {
 		const currentTime = new Date().getTime();
 		const differentTime = currentTime - lastDiagnosisTime;
-		const limitTime = 6 * 60 * 60 * 1000;
+		const limitTime = 3 * 60 * 60 * 1000;
 
 		const remainingTime = limitTime - differentTime;
 
