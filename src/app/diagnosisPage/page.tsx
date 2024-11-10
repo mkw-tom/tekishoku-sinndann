@@ -18,9 +18,6 @@ const Page = () => {
 			<Header />
 			<main className="w-hull h-auto bg-gradient-to-tr to-info from-success ">
 				<div className="h-full pb-48 pt-20 px-5 md:px-10">
-					{/* <div className="flex w-full items-center justify-between">
-					
-					</div> */}
 					<div className="text-md mb-5 font-bold flex justify-between w-11/12">
 						・８つの項目を入力してください。
 						<button

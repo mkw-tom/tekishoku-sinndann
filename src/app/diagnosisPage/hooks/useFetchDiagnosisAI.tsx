@@ -12,10 +12,6 @@ const useFetchDiagnosisAI = () => {
 	const dispatch = useDispatch();
 	const sendData = useSelector((state: storeType) => state.diagnosisSendData);
 	const user = useSelector((state: storeType) => state.auth);
-	// const [state, reducer] = useReducer(AnalysisFormDataReducer, AnalysisFormDataState)
-	// const { formDataDispatch } = useAnalysis()
-	// const { user } = useUser()
-	// const { setAnalysis } = useAnalysis()
 
 	const data = {
 		userId: user?.id,
@@ -79,8 +75,6 @@ const useFetchDiagnosisAI = () => {
 
 			const result = await res.json();
 
-			// formDataDispatch({ type: 'CLEAR'})
-			console.log(result);
 			dispatch(
 				setUserDiagnosis({
 					userId: result.userId,

@@ -6,9 +6,6 @@ import { FiLogOut } from "react-icons/fi";
 const LogoutButton = () => {
 	const handleLogout = async () => {
 		await signOut({ callbackUrl: "/" });
-
-		// dispatch(clearUser());
-		// console.log(user)
 	};
 	return (
 		<button

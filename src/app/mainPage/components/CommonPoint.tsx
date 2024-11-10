@@ -1,21 +1,14 @@
 "use client";
-
 import type { storeType } from "@/app/types/ReduxTypes";
 import { GrTroubleshoot } from "react-icons/gr";
 import { useSelector } from "react-redux";
 
-// import { useAnalysis } from '@/app/state/context/useAnalysisData'
-// import { Troubleshoot } from '@mui/icons-material'
-
 const CommonPoint = () => {
-	// const { Analysis } = useAnalysis()
-	// const CommonPoint = Analysis?.commonPoints.slice(0, Analysis.commonPoints.length - 1)
 	const userDiagnosis = useSelector((state: storeType) => state.userDiagnosis);
 	const commonPoint = userDiagnosis.commonPoints.slice(
 		0,
 		userDiagnosis.commonPoints.length - 1,
 	);
-	console.log("common", userDiagnosis.commonPoints);
 	return (
 		<section className="flex w-full flex-col items-start dark:text-gray-700">
 			<h3 className="text-lgmd:text-xl mb-3 flex items-center font-bold">

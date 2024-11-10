@@ -5,9 +5,6 @@ import { MBTiArray } from "@/app/diagnosisPage/selectOptions";
 import type { storeType } from "@/app/types/ReduxTypes";
 import { useSelector } from "react-redux";
 
-// import { MBTiArray } from '@/app/analysis_page/selectOption'
-// import useAnalysisForm from '../../Hooks/useAnalysisForm'
-
 const MBTIandSkills = () => {
 	const inputDatas = useSelector(
 		(state: storeType) => state.diagnosisFormInput,
@@ -23,12 +20,6 @@ const MBTIandSkills = () => {
 			>
 				<span className=" inline-block w-60 px-2 lg:block">1. MBTI</span>
 				<div className="w-full md:flex">
-					{/* <select
-            className="select select-info w-10/12 sm:w-full max-w-xs dark:bg-gray-600"
-            name="mbti"
-            value={inputState.mbti}
-            onChange={(e) => handleChangeInput(e)}
-          > */}
 					<select
 						className="select select-info w-full max-w-xs dark:bg-gray-600"
 						onChange={(e) => setMBTIFunc(e.target.value)}
@@ -40,7 +31,6 @@ const MBTIandSkills = () => {
 							</option>
 						))}
 					</select>
-					{/* <button className="btn btn-square btn-info text-white" type='button' onClick={selectMBTI}>追加</button> */}
 				</div>
 			</label>
 
@@ -50,13 +40,6 @@ const MBTIandSkills = () => {
 					className="flex w-full flex-col sm:items-start lg:flex-row lg:items-center"
 				>
 					<span className=" inline-block w-72 px-2">2. スキル・特技</span>
-					{/* <input
-            type="text"
-            name="skills"
-            placeholder="フラッシュ暗算"
-            className="input input-bordered input-info w-80 max-w-xs dark:bg-gray-600"
-            onKeyDown={(e) => handleAddValue('skills', e)}
-          /> */}
 					<div className="w-full md:flex ">
 						<input
 							type="text"
@@ -65,7 +48,6 @@ const MBTIandSkills = () => {
 							placeholder="フラッシュ暗算"
 							className="input input-bordered input-info  w-10/12 max-w-xs dark:bg-gray-600 sm:w-80"
 							onChange={(e) => handleChangeInput(e)}
-							// onKeyDown={(e) => handleAddValue('skills', e)}
 						/>
 						<button
 							className="btn btn-square btn-info text-white"

@@ -21,7 +21,6 @@ const EmailButton = ({
 		const options = login.login
 			? {
 					callbackUrl: "/mainPage",
-					// username: username,
 					email: email,
 					password: password,
 				}

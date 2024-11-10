@@ -1,12 +1,8 @@
 "use client";
-
 import useDiangnosisForm from "@/app/diagnosisPage/hooks/useDiangnosisForm";
 import { valesArray } from "@/app/diagnosisPage/selectOptions";
 import type { storeType } from "@/app/types/ReduxTypes";
 import { useSelector } from "react-redux";
-
-// import { valesArray } from '@/app/analysis_page/selectOption'
-// import useAnalysisForm from '../../Hooks/useAnalysisForm'
 
 const InterestsAndValues = () => {
 	const inputDatas = useSelector(
@@ -32,7 +28,6 @@ const InterestsAndValues = () => {
 							name="interests"
 							value={inputDatas.interests}
 							onChange={(e) => handleChangeInput(e)}
-							// onKeyDown={(e) => handleAddValue('interests', e)}
 						/>
 						<button
 							className="btn btn-square btn-info text-white  border-2"

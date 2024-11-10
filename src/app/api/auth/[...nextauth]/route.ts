@@ -1,6 +1,3 @@
-// import { UserModel } from '@/lib/mongoDB/models/User'
-// import connectDB from '@/lib/mongoDB/mongodb'
-// import { compare, hash } from 'bcryptjs'
 import { UserModel } from "@/lib/mongoDB/models/User";
 import connectDB from "@/lib/mongoDB/mongo";
 import { compare, hash } from "bcryptjs";

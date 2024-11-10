@@ -11,17 +11,9 @@ const MoealLoginForm = () => {
 			<div className="flex flex-col gap-3">
 				<div className="w-8/12 mx-auto">
 					<GoogleButton />
-					{/* <button type="button" className="btn  btn-xl w-full text-lg">
-                <FcGoogle className="w-7 h-7" />
-                Googleで新規登録
-              </button> */}
 				</div>
 
 				<div className="w-8/12 mx-auto">
-					{/* <button type="button" className="btn  btn-xl w-full text-lg">
-                <FaGithub className="w-7 h-7 " />
-                GitHubで新規登録
-              </button> */}
 					<GitHubButton />
 
 					<hr className="my-10" />

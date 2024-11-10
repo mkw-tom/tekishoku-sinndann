@@ -12,13 +12,6 @@ export async function POST(req: NextRequest) {
 	await connectDB();
 
 	const decoded = await getToken({ req, secret: process.env.JWT_SECRET });
-
-	// if (!decoded) {
-	//   return new NextResponse(`unauthoriz ${decoded}`, { status: 401 })
-	// } else {
-	//   // console.dir(decoded)
-	//   console.log(`success authoriz!!`)
-	// }
 	const userEmail = decoded?.email;
 
 	if (!userEmail) {
@@ -26,7 +19,6 @@ export async function POST(req: NextRequest) {
 	}
 
 	try {
-		// const hasheEmailAndSalt = await hash(userEmail, 12)
 		const user = await UserModel.findOne({ email: userEmail });
 
 		if (!user) {

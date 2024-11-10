@@ -19,7 +19,6 @@ const ShareButton = () => {
 					className={`${userDiagnosis.userId === "" ? "btn btn-disabled btn-xs sm:btn-sm md:btn-md " : "btn btn-xs sm:btn-sm md:btn-md"}`}
 					onClick={OpenLoginFormFunc}
 				>
-					{/* <CgSearchFound className="h-5 w-5" /> */}
 					シェア
 				</button>
 				<dialog id="my_modal_4" className="modal">

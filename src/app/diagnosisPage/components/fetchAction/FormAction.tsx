@@ -10,10 +10,9 @@ const FormAction = () => {
 	const fetchAI = async () => {
 		await fetchDiagnasis();
 	};
-	// const { error, success, loading, handleAnalyze } = useAnalysisForm()
-	const { loading, success, error, data, fetchDiagnasis } =
-		useFetchDiagnosisAI();
-	console.log(data);
+
+	const { loading, success, error, fetchDiagnasis } = useFetchDiagnosisAI();
+
 	return (
 		<div className="mt-5 flex w-full items-center">
 			{loading && <Loading />}

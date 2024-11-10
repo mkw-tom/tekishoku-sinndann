@@ -1,10 +1,7 @@
 "use client";
-
 import useDiangnosisForm from "@/app/diagnosisPage/hooks/useDiangnosisForm";
 import type { storeType } from "@/app/types/ReduxTypes";
 import { useSelector } from "react-redux";
-
-// import useAnalysisForm from '../../Hooks/useAnalysisForm'
 
 const CertificationsAndExperience = () => {
 	const inputDatas = useSelector(
@@ -28,7 +25,6 @@ const CertificationsAndExperience = () => {
 							value={inputDatas.certifications}
 							placeholder="日商簿記３級、ITパスポート"
 							onChange={(e) => handleChangeInput(e)}
-							// onKeyDown={(e) => handleAddValue('certifications', e)}
 						/>
 
 						<button

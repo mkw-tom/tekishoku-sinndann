@@ -24,7 +24,6 @@ const RightView = () => {
 				</div>
 			</div>
 			<OpenLoginForm />
-			{/* <div className="flex w-56 mx-auto gap-2 justify-center mt-10"><FaCircle /><FaCircle /><FaCircle /></div> */}
 		</section>
 	);
 };

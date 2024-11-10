@@ -21,16 +21,7 @@ const ShareModal = () => {
 
 	return (
 		<div className="flex flex-col gap-5 items-center">
-			{/* <h2>SNSで適職をシェア</h2> */}
 			<div className="flex flex-col gap-5 items-center justify-center mx-auto w-11/12 ">
-				{/* <FacebookShareButton
-					url={URL}
-					title={QUOTE}
-					className="flex flex-col items-center gap-1"
-				>
-					<FacebookIcon size={50} round />
-					<p>facebook</p>
-				</FacebookShareButton> */}
 				<p className="text-lg flex items-center gap-1 mb-3">
 					<BsTwitterX />
 					<span>で診断結果をシェアしよう！</span>
@@ -44,7 +35,6 @@ const ShareModal = () => {
 					className="flex flex-col items-center"
 				>
 					<p className="flex items-center btn btn-outline">
-						{/* <BsTwitterX /> */}
 						<span>あなたの適職を投稿する</span>
 					</p>
 				</TwitterShareButton>

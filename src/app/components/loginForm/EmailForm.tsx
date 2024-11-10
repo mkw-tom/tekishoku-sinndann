@@ -2,7 +2,6 @@
 import type { storeType } from "@/app/types/ReduxTypes";
 import { EmailLoginValidationSchema } from "@/lib/zod/validate";
 import { zodResolver } from "@hookform/resolvers/zod";
-// import EmailFormInputs from "./EmailFormInputs";
 import { signIn } from "next-auth/react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
@@ -73,11 +72,7 @@ const EmailIForm = () => {
 	};
 
 	return (
-		// <FormProvider {...methods}>
-		<div
-			className="w-9/12 lg:w-7/12 mx-auto flex flex-col gap-3"
-			// onSubmit={handleSubmit(onSubmit)}
-		>
+		<div className="w-9/12 lg:w-7/12 mx-auto flex flex-col gap-3">
 			{/* <EmailFormInputs />  */}
 			{!login.login && (
 				<label
@@ -143,7 +138,6 @@ const EmailIForm = () => {
 				Emailで{login.login ? "ログイン" : "新規登録"}
 			</button>
 		</div>
-		// </FormProvider>
 	);
 };
 

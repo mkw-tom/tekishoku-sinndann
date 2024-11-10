@@ -2,8 +2,6 @@
 import type { storeType } from "@/app/types/ReduxTypes";
 import { MdPsychology } from "react-icons/md";
 import { useSelector } from "react-redux";
-// import { useAnalysis } from '@/app/state/context/useAnalysisData'
-// import { Psychology } from '@mui/icons-material'
 import ResultChart from "./ResultChart";
 
 const Skills = () => {
