@@ -15,7 +15,7 @@ const Page = () => {
 				<div className="mx-5 h-full pb-20 pt-20 md:mx-10 ">
 					<div className="mx-auto mt-10 w-full xl:w-11/12">
 						<h2 className="flex items-center justify-between border-b-2 border-b-gray-800 font-bold tracking-wider">
-							<span className="text-2xl text-gray-800 flex items-center">
+							<span className="text-xl md:text-2xl text-gray-800 flex items-center">
 								<CgSearchFound className="w-7 h-7 mr-2" />
 								AIの診断結果
 							</span>

@@ -19,30 +19,30 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-	title: "WorkME",
+	title: "MBTI適職診断",
 	description: "「MBTI」と「スキル・志向性」によるAI適職診断",
 	openGraph: {
-		title: "WorkME",
+		title: "MBTI適職診断",
 		description: "「MBTI」と「スキル・志向性」によるAI適職診断",
 		url: "https://tekishoku-sinndann.vercel.app",
-		images: [
-			{
-				url: "/W.png",
-				width: 800,
-				height: 600,
-				alt: "WorkMEのロゴ",
-			},
-		],
+		// images: [
+		// 	{
+		// 		url: "/W.png",
+		// 		width: 800,
+		// 		height: 600,
+		// 		alt: "WorkMEのロゴ",
+		// 	},
+		// ],
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "WorkME",
+		title: "MBTI適職診断",
 		description: "「MBTI」と「スキル・志向性」によるAI適職診断",
-		images: ["/W.png"],
+		// images: ["/W.png"],
 	},
 	icons: {
 		icon: "favicon.ico", // 一般的なファビコン（favicon.ico）
-		apple: "/W.png", // Apple Touch Icon
+		// apple: "/W.png", // Apple Touch Icon
 	},
 };
 

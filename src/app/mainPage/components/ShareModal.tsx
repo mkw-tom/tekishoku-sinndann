@@ -12,7 +12,7 @@ const ShareModal = () => {
 		.join("\n");
 
 	const URL = "https://tekishoku-sinndann.vercel.app";
-	const QUOTE = `【 WorkME -AI適職診断- 】
+	const QUOTE = `【 MBTI適職診断 】
   ${user.username}さんの診断結果
   ${diagnosisList}
   
