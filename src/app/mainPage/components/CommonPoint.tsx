@@ -10,7 +10,7 @@ const CommonPoint = () => {
 		userDiagnosis.commonPoints.length - 1,
 	);
 	return (
-		<section className="flex w-full flex-col items-start dark:text-gray-700">
+		<section className="flex w-full flex-col items-start dark:text-gray-700 mt-16">
 			<h3 className="text-lgmd:text-xl mb-3 flex items-center font-bold">
 				<GrTroubleshoot />
 				<span>これら職業の共通特徴</span>
