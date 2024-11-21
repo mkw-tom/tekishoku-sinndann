@@ -1,4 +1,4 @@
-# WorkME　　- AI適職診断 -
+# MBTI適職診断
 
 [アプリを開く](https://tekishoku-sinndann.vercel.app)
 
