@@ -1,24 +1,7 @@
 # MBTI適職診断
 
 [アプリを開く](https://tekishoku-sinndann.vercel.app)
-
-## 技術スタック
-
-<img alt="my skills" src="https://skillicons.dev/icons?theme=dark&perline=7&i=ts,next,mongodb,tailwindcss,redux,postman,vercel,docker" />
-
-### その他ライブラリ
-
-- OpenAI API ⭐
-- NextAuth (OAuth・JWT)
-- Chart.js
-- mongoose
-- React Hook Form
-- Zod
-- daysyUI
-- react-icons
-- react-share
-  <br/>
-  <br/>
+<br>
 
 ## アプリの機能
 
@@ -48,3 +31,22 @@
 ![result](public/display-result.jpeg)
 - #### シェア
 ![share](public/display-share.jpeg)
+
+<br>
+<br>
+
+## 技術スタック
+
+<img alt="my skills" src="https://skillicons.dev/icons?theme=dark&perline=7&i=ts,next,mongodb,tailwindcss,redux,postman,vercel,docker" />
+
+### その他ライブラリ
+
+- OpenAI API ⭐
+- NextAuth (OAuth・JWT)
+- Chart.js
+- mongoose
+- React Hook Form
+- Zod
+- daysyUI
+- react-icons
+- react-share
