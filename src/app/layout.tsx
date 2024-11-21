@@ -41,7 +41,7 @@ export const metadata: Metadata = {
 		// images: ["/W.png"],
 	},
 	icons: {
-		icon: "favicon.ico", // 一般的なファビコン（favicon.ico）
+		// icon: "favicon.ico", // 一般的なファビコン（favicon.ico）
 		// apple: "/W.png", // Apple Touch Icon
 	},
 };
