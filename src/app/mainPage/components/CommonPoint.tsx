@@ -11,7 +11,7 @@ const CommonPoint = () => {
 	);
 	return (
 		<section className="flex w-full flex-col items-start dark:text-gray-700 mt-16">
-			<h3 className="text-lgmd:text-xl mb-3 flex items-center font-bold">
+			<h3 className="text-md md:text-lg mb-3 flex items-center font-bold">
 				<GrTroubleshoot />
 				<span>これら職業の共通特徴</span>
 			</h3>

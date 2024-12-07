@@ -10,7 +10,7 @@ const Job = () => {
 
 	return (
 		<section className="flex w-full flex-col items-start dark:text-gray-700">
-			<h3 className="text-lgmd:text-xl mb-3 flex items-center font-bold">
+			<h3 className="text-md md:text-lg mb-3 flex items-center font-bold">
 				<MdPersonSearch />
 				マッチした職業
 			</h3>
