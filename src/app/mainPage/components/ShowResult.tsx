@@ -13,9 +13,11 @@ const ShowResult = () => {
 	const [isLoading, setIsLoading] = useState(true);
 
 	useEffect(() => {
-		if (diagnosis) {
-			setIsLoading(false);
-		}
+		setTimeout(() => {
+			if (diagnosis) {
+				setIsLoading(false);
+			}
+		}, 2000);
 	}, [diagnosis]);
 
 	return (
