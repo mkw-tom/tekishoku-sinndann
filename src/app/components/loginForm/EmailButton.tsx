@@ -32,7 +32,7 @@ const EmailButton = ({
 				};
 
 		const result = await signIn("credentials", options);
-		if (result?.error) {
+		if (!result) {
 			alert("既にユーザーが存在します");
 			console.log("era-");
 		}

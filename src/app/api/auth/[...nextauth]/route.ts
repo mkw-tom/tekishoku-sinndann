@@ -43,6 +43,7 @@ const handler = NextAuth({
 					// biome-ignore lint/style/noUselessElse: <explanation>
 				} else {
 					if (existUser) {
+						alert("既に同じメールアドレスが使用されています");
 						throw new Error(`already exist this user ${credentials.username}`);
 					}
 					const hashedAndSaltPassword = await hash(credentials.password, 12);
