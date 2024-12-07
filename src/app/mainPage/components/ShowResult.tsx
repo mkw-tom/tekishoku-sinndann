@@ -35,7 +35,7 @@ const ShowResult = () => {
 							<div
 								className="hidden group-hover:block tooltip tooltip-open tooltip-top left-10 bottom-3"
 								data-tip="クリックで詳細を見る"
-							></div>
+							/>
 							<a
 								href="https://www.16personalities.com/ja/intj%E5%9E%8B%E3%81%AE%E6%80%A7%E6%A0%BC"
 								target="block"
