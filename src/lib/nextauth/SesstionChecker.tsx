@@ -41,6 +41,7 @@ const SesstionChecker = ({ children }: { children: ReactNode }) => {
 				dispatch(
 					setUserDiagnosis({
 						userId: jsonData?.diagnosisData.userId,
+						mbti: jsonData?.diagnosisData.mbti,
 						commonPoints: jsonData?.diagnosisData.commonPoints,
 						jobProposals: jsonData?.diagnosisData.jobProposals,
 						skillScores: jsonData?.diagnosisData.skillScores,

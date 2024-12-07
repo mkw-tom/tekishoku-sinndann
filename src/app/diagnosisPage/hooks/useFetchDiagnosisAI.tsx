@@ -78,6 +78,7 @@ const useFetchDiagnosisAI = () => {
 			dispatch(
 				setUserDiagnosis({
 					userId: result.userId,
+					mbti: result.mbti,
 					commonPoints: result.commonPoints,
 					jobProposals: result.jobProposals,
 					skillScores: result.skillScores,

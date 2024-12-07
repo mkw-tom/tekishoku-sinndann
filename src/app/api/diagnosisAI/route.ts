@@ -47,6 +47,7 @@ function parseResponse(text: string) {
 		skillScores,
 	};
 }
+
 // OpenAI APIの設定
 const openai = new OpenAI({
 	apiKey: process.env.OPENAI_API_KEY,
@@ -156,8 +157,8 @@ export async function POST(req: NextRequest) {
 			commonPoints: parsedData.commonPoints,
 			skillScores: parsedData.skillScores,
 			timestamp: new Date().getTime(),
+			mbti,
 		};
-
 		//mongoDBに保存してまーす
 
 		const existedData = await DiagnosissModel.findOne({ userId });

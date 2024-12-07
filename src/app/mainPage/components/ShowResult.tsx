@@ -3,6 +3,7 @@ import type { storeType } from "@/app/types/ReduxTypes";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { CgSearchFound } from "react-icons/cg";
+import { MdPerson } from "react-icons/md";
 import { useSelector } from "react-redux";
 import CommonPoint from "./CommonPoint";
 import Job from "./Job";
@@ -20,6 +21,23 @@ const ShowResult = () => {
 		}, 2000);
 	}, [diagnosis]);
 
+	/// MBTI種類別の色わけ
+	const changeColorMBTI = (mbti: string): string => {
+		// MBTIを色分け
+		switch (true) {
+			case /^[EI]NT[JP]$/.test(mbti): // ○NT○（紫）
+				return "text-purple-600";
+			case /^[EI]NF[JP]$/.test(mbti): // ○NF○（緑）
+				return "text-green-700";
+			case /^[EI]S[T|F]J$/.test(mbti): // ○S○J（水色）
+				return "text-info";
+			case /^[EI]S[T|F]P$/.test(mbti): // ○S○P（黄色）
+				return "text-yellow-700";
+			default:
+				return "gray"; // 未分類の場合のデフォルト色
+		}
+	};
+
 	return (
 		<>
 			{isLoading ? (
@@ -32,20 +50,21 @@ const ShowResult = () => {
 			) : diagnosis.userId ? (
 				<div className="flex w-full flex-col justify-between gap-5 px-1 pt-5 lg:flex-row">
 					<div className="flex w-full flex-col gap-5 rounded-md bg-green-100 bg-opacity-60 p-5 lg:w-1/2">
-						{/* <h3 className="group text-lgmd:text-xl mb-3 flex items-center font-bol text-base-100 font-bold">
+						<h3 className="group text-md md:text-lg mb-3 flex items-center font-bol text-base-100 font-bold dark:text-gray-700">
+							<MdPerson />
 							あなたのMBTI：
 							<div
 								className="hidden group-hover:block tooltip tooltip-open tooltip-top left-10 bottom-3"
 								data-tip="クリックで詳細を見る"
 							/>
 							<a
-								href="https://www.16personalities.com/ja/intj%E5%9E%8B%E3%81%AE%E6%80%A7%E6%A0%BC"
+								href={`https://www.16personalities.com/ja/${diagnosis.mbti}%E5%9E%8B%E3%81%AE%E6%80%A7%E6%A0%BC`}
 								target="block"
-								className="btn btn-sm btn-link text-purple-500 text-lg"
+								className={`btn btn-sm btn-link ${changeColorMBTI(diagnosis.mbti)} text-lg md:text-xl`}
 							>
-								INTJ
+								{diagnosis.mbti}
 							</a>
-						</h3> */}
+						</h3>
 						<Job />
 						<CommonPoint />
 					</div>
