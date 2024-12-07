@@ -37,6 +37,7 @@ export interface DiagnosisFormInputType {
 
 export interface userDiagnosisType {
 	userId: string;
+	mbti: string;
 	jobProposals: string[];
 	commonPoints: string[];
 	skillScores: skillScoresType[];

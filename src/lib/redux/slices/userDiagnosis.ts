@@ -5,6 +5,7 @@ const userDiagnosisSlice = createSlice({
 	name: "userDiagnosis",
 	initialState: {
 		userId: "",
+		mbti: "",
 		jobProposals: [],
 		commonPoints: [],
 		skillScores: [],
@@ -16,6 +17,7 @@ const userDiagnosisSlice = createSlice({
 			action: PayloadAction<userDiagnosisType>,
 		) => {
 			state.userId = action.payload.userId;
+			state.mbti = action.payload.mbti;
 			state.commonPoints = action.payload.commonPoints;
 			state.jobProposals = action.payload.jobProposals;
 			state.skillScores = action.payload.skillScores;
