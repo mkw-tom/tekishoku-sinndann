@@ -30,7 +30,7 @@ const ShowResult = () => {
 			) : diagnosis.userId ? (
 				<div className="flex w-full flex-col justify-between gap-5 px-1 pt-5 lg:flex-row">
 					<div className="flex w-full flex-col gap-5 rounded-md bg-green-100 bg-opacity-60 p-5 lg:w-1/2">
-						<h3 className="group text-lgmd:text-xl mb-3 flex items-center font-bol text-base-100 font-bold">
+						{/* <h3 className="group text-lgmd:text-xl mb-3 flex items-center font-bol text-base-100 font-bold">
 							あなたのMBTI：
 							<div
 								className="hidden group-hover:block tooltip tooltip-open tooltip-top left-10 bottom-3"
@@ -43,7 +43,7 @@ const ShowResult = () => {
 							>
 								INTJ
 							</a>
-						</h3>
+						</h3> */}
 						<Job />
 						<CommonPoint />
 					</div>
