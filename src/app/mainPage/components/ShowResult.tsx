@@ -14,11 +14,11 @@ const ShowResult = () => {
 	const [isLoading, setIsLoading] = useState(true);
 
 	useEffect(() => {
-		setTimeout(() => {
-			if (diagnosis) {
+		if (diagnosis) {
+			setTimeout(() => {
 				setIsLoading(false);
-			}
-		}, 2000);
+			}, 150);
+		}
 	}, [diagnosis]);
 
 	/// MBTI種類別の色わけ
@@ -38,19 +38,18 @@ const ShowResult = () => {
 		}
 	};
 
+	console.log(diagnosis);
 	return (
 		<>
 			{isLoading ? (
-				<div className="flex justify-center items-center h-full mt-20">
-					<span className="loading loading-spinner loading-md sm:loading-lg" />
-					<span className="ml-3 text-sm sm:text-lg">
-						診断結果を読み込んでいます...
-					</span>
+				<div className="flex flex-col justify-center items-center h-full mt-36">
+					<span className="loading loading-bars loading-md sm:loading-lg" />
+					<span className="ml-3 text-sm sm:text-lg font-bold">Loading...</span>
 				</div>
-			) : diagnosis.userId ? (
+			) : !isLoading && diagnosis.userId ? (
 				<div className="flex w-full flex-col justify-between gap-5 px-1 pt-5 lg:flex-row">
 					<div className="flex w-full flex-col gap-5 rounded-md bg-green-100 bg-opacity-60 p-5 lg:w-1/2">
-						<h3 className="group text-md md:text-lg mb-3 flex items-center font-bol text-base-100 font-bold dark:text-gray-700">
+						<h3 className="group text-md md:text-lg mb-3 flex items-center font-bold dark:text-gray-700">
 							<MdPerson />
 							あなたのMBTI：
 							<div
@@ -60,7 +59,9 @@ const ShowResult = () => {
 							<a
 								href={`https://www.16personalities.com/ja/${diagnosis.mbti}%E5%9E%8B%E3%81%AE%E6%80%A7%E6%A0%BC`}
 								target="block"
-								className={`btn btn-sm btn-link ${changeColorMBTI(diagnosis.mbti)} text-lg md:text-xl`}
+								className={`btn btn-sm btn-link ${changeColorMBTI(
+									diagnosis.mbti,
+								)} text-lg md:text-xl`}
 							>
 								{diagnosis.mbti}
 							</a>
