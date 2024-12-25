@@ -17,7 +17,7 @@ const ShowResult = () => {
 		if (diagnosis) {
 			setTimeout(() => {
 				setIsLoading(false);
-			}, 150);
+			}, 500);
 		}
 	}, [diagnosis]);
 
@@ -38,47 +38,64 @@ const ShowResult = () => {
 		}
 	};
 
-	console.log(diagnosis);
+	//　-----------画面切り替え-------------
+	const successUI = () => {
+		return (
+			<div className="flex w-full flex-col justify-between gap-5 px-1 pt-5 lg:flex-row">
+				<div className="flex w-full flex-col gap-5 rounded-md bg-green-100 bg-opacity-60 p-5 lg:w-1/2">
+					<h3 className="group text-md md:text-lg mb-3 flex items-center font-bold dark:text-gray-700">
+						<MdPerson />
+						あなたのMBTI：
+						<div
+							className="hidden group-hover:block tooltip tooltip-open tooltip-top left-10 bottom-3"
+							data-tip="クリックで詳細を見る"
+						/>
+						<a
+							href={`https://www.16personalities.com/ja/${diagnosis.mbti}%E5%9E%8B%E3%81%AE%E6%80%A7%E6%A0%BC`}
+							target="block"
+							className={`btn btn-sm btn-link ${changeColorMBTI(
+								diagnosis.mbti,
+							)} text-lg md:text-xl`}
+						>
+							{diagnosis.mbti}
+						</a>
+					</h3>
+					<Job />
+					<CommonPoint />
+				</div>
+				<Skills />
+			</div>
+		);
+	};
+
+	const emptyUI = () => {
+		return (
+			<div className={`mt-5 ${diagnosis?.userId ? "hidden" : "block"} `}>
+				<div className="dark:text-gray-800 font-bold">
+					診断結果がありません💦
+				</div>
+				<Link href="/diagnosisPage" className="btn btn-md mt-4 shadow-md">
+					<CgSearchFound className="w-5 h-5" />
+					<span>今すぐ診断</span>
+				</Link>
+			</div>
+		);
+	};
+
 	return (
 		<>
 			{isLoading ? (
 				<div className="flex flex-col justify-center items-center h-full mt-36">
-					<span className="loading loading-bars loading-md sm:loading-lg" />
-					<span className="ml-3 text-sm sm:text-lg font-bold">Loading...</span>
+					<span className="loading loading-bars loading-md sm:loading-lg dark:text-gray-700" />
+					<span className="ml-3 text-sm sm:text-lg font-bold dark:text-gray-700">
+						Loading...
+					</span>
 				</div>
-			) : !isLoading && diagnosis.userId ? (
-				<div className="flex w-full flex-col justify-between gap-5 px-1 pt-5 lg:flex-row">
-					<div className="flex w-full flex-col gap-5 rounded-md bg-green-100 bg-opacity-60 p-5 lg:w-1/2">
-						<h3 className="group text-md md:text-lg mb-3 flex items-center font-bold dark:text-gray-700">
-							<MdPerson />
-							あなたのMBTI：
-							<div
-								className="hidden group-hover:block tooltip tooltip-open tooltip-top left-10 bottom-3"
-								data-tip="クリックで詳細を見る"
-							/>
-							<a
-								href={`https://www.16personalities.com/ja/${diagnosis.mbti}%E5%9E%8B%E3%81%AE%E6%80%A7%E6%A0%BC`}
-								target="block"
-								className={`btn btn-sm btn-link ${changeColorMBTI(
-									diagnosis.mbti,
-								)} text-lg md:text-xl`}
-							>
-								{diagnosis.mbti}
-							</a>
-						</h3>
-						<Job />
-						<CommonPoint />
-					</div>
-					<Skills />
-				</div>
+			) : //------------画面切り替えーーーーーーーー
+			diagnosis?.userId ? (
+				successUI()
 			) : (
-				<div className="mt-5">
-					<div className="">診断結果がありません💦</div>
-					<Link href="/diagnosisPage" className="btn btn-md mt-4 shadow-md">
-						<CgSearchFound className="w-5 h-5" />
-						<span>今すぐ診断</span>
-					</Link>
-				</div>
+				emptyUI()
 			)}
 		</>
 	);
