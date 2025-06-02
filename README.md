@@ -35,6 +35,10 @@
 <br>
 <br>
 
+## 開発
+- 開発人数：1人
+- 期間：1ヶ月半
+  
 ## 技術スタック
 
 <img alt="my skills" src="https://skillicons.dev/icons?theme=dark&perline=7&i=ts,next,mongodb,tailwindcss,redux,postman,vercel,docker" />
